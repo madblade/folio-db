@@ -21,8 +21,8 @@ let technical  = Technical.getArticles();
 let thoughts   = Thoughts.getArticles();
                
 let allArticles = [];
-allArticles.push(...craft    );
 allArticles.push(...homepage );
+allArticles.push(...craft    );
 allArticles.push(...pieces   );
 allArticles.push(...technical);
 allArticles.push(...thoughts );
