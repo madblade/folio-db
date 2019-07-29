@@ -55,7 +55,8 @@ function writeTitles(categoryString, array) {
    for (let i = 0; i < array.length; ++i) {
       titles.push({
          'id': allArticles[i].id,
-         'title': allArticles[i].title      
+         'title': allArticles[i].title,
+         'date': allArticles[i].date
       });   
    }
    fs.writeFile(
