@@ -1,21 +1,22 @@
 // export enum ParagraphType
-export class ParagraphType {
-  Title() { return 0; }
-  Subtitle() { return 1; }
-  Paragraph() { return 2; }
-  Link() { return 3; }
-  Image() { return 4; }
-  TwoImages() { return 5; }
-  Quotation() { return 6; }
-  Equation() { return 7; }
-  Lettrine() { return 8; }
-  Video() { return 9; }
-  Code() { return 10; }
-  CollapsibleCode() { return 11; }
-  ListItemFR() { return 12; }
-  ListItem() { return 13; }
-  ClickableDemo() { return 14; }
+const ParagraphType = {
+  Title: 0,
+  Subtitle: 1,
+  Paragraph: 2,
+  Link: 3,
+  Image: 4,
+  TwoImages: 5,
+  Quotation: 6,
+  Equation: 7,
+  Lettrine: 8,
+  Video: 9,
+  Code: 10,
+  CollapsibleCode: 11,
+  ListItemFR: 12,
+  ListItem: 13,
+  ClickableDemo: 14
 }
+export { ParagraphType };
 
 /*
 export class Article {
