@@ -35,10 +35,13 @@ fs.writeFile(
 ); 
 
 // Json all-titles
-let allTitles = {};
+let allTitles = [];
 for (let i = 0; i < allArticles.length; ++i) {
    allArticles[i].id = i;
-   allTitles[allArticles[i].id] = allArticles[i].title;
+   allTitles.push({
+      'id': allArticles[i].id,
+      'title': allArticles[i].title
+   });
 }
 fs.writeFile(
    './' + outputFolder + '/all-titles.json',
@@ -48,9 +51,12 @@ fs.writeFile(
 
 // Json titles-per-category
 function writeTitles(categoryString, array) {
-   let titles = {};
+   let titles = [];
    for (let i = 0; i < array.length; ++i) {
-      titles[array[i].id] = array[i].title;
+      titles.push({
+         'id': allArticles[i].id,
+         'title': allArticles[i].title      
+      });   
    }
    fs.writeFile(
       './' + outputFolder + '/' + categoryString + '.json',
