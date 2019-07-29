@@ -19,7 +19,7 @@ let homepage   = Homepage.getArticles();
 let pieces     = Pieces.getArticles();
 let technical  = Technical.getArticles();
 let thoughts   = Thoughts.getArticles();
-
+               
 let allArticles = [];
 allArticles.push(...craft    );
 allArticles.push(...homepage );
@@ -54,9 +54,9 @@ function writeTitles(categoryString, array) {
    let titles = [];
    for (let i = 0; i < array.length; ++i) {
       titles.push({
-         'id': allArticles[i].id,
-         'title': allArticles[i].title,
-         'date': allArticles[i].date
+         'id': array[i].id,
+         'title': array[i].title,
+         'date': array[i].date
       });   
    }
    fs.writeFile(
