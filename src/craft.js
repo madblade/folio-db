@@ -59,7 +59,7 @@ export class Craft {
               '<a href="https://madblade.github.io/kanalearn/">Learn kana</a>'
           },
           {type: ParagraphType.Paragraph, content:
-              '<a href="https://github.com/madblade/kanjilearn/">Learn kanji (experimental)</a>'
+              '<a href="https://madblade.github.io/kanjilearn/">Learn kanji (experimental)</a>'
           },
           {type: ParagraphType.Title, content: 'Quick notes' },
           {type: ParagraphType.Paragraph, content:
