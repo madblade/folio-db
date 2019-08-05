@@ -13,15 +13,13 @@ export class Homepage {
         body: [
           {type: ParagraphType.Title, content: 'About me'},
           {type: ParagraphType.Paragraph, content:
-              'My interests: animation, tales, music, ' +
-              'epistemology, sociology, metaphysics. '
-          },
-          {type: ParagraphType.Paragraph, content:
-              'My skills: computer science (programming, architecture, ' +
-              'real-time graphics, geometry, topology and algorithms); ' +
-              'communication (redaction, edition, tutoring, ' +
-              'binge-reading). ' +
-              'Hire me! '
+              'I am a software/R&D engineer ' +
+              'with background in software development, topology, graphics, ' +
+              'visualization and algorithms. I completed my PhD in  ' +
+              'Computer Science from Sorbonne University in 2019 and ' +
+              'I am currently looking for a position the ' + 
+              'animation or video game industry. ' +
+              'Hire me!'
           },
           {type: ParagraphType.Paragraph, content:
               'My experience: ' +
@@ -29,8 +27,19 @@ export class Homepage {
               'for 5 years (machine learning, meshing, CFD, and topology); ' +
               'graphics and game design experimenter for ' +
               '3 years on my free time (small side projects in ' +
-              'javascript). ' +
-              'Hire me! '
+              'javascript, upcoming release). ' +
+              ''
+          },
+          {type: ParagraphType.Paragraph, content:
+              'My skills: computer science (programming, architecture, ' +
+              'real-time graphics, geometry, topology and algorithms); ' +
+              'communication (redaction, edition, tutoring, ' +
+              'binge-reading). ' +
+              ''
+          },
+          {type: ParagraphType.Paragraph, content:
+              'My interests: animation, tales, music, ' +
+              'epistemology, sociology, metaphysics. '
           },
           {type: ParagraphType.Title, content: 'About this website'},
           {type: ParagraphType.Paragraph, content:
@@ -41,7 +50,7 @@ export class Homepage {
               'since humans share environment, history and ' +
               '<a href="https://www.nature.com/news/most-europeans-share-recent-ancestors-1.12950">ancestry</a>. ' +
               'Drawing inspiration from Sam Hughes\' <a href="https://qntm.org">delightful blog</a>, ' +
-              'this place is intended to compile ' +
+              'this place was originally intended to compile ' +
               'a medley of harebrained technical ideas, ' +
               'visual javascript demos, random thoughts ' +
               'and other things hardly worthy of interest. '
