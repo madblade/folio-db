@@ -1,21 +1,16 @@
 import {ParagraphType} from './article';
+import {A1} from './thoughts-detail/art1';
+import {A2} from './thoughts-detail/art2';
+import {A3} from './thoughts-detail/art3';
 
 export class Thoughts {
 
   static getArticles() {
     const articles = [
-      { title: 'A genealogy of Qualia',
-        date: 'draft',
-        body: [
-          {type: ParagraphType.Title, content: 'Introduction' },
-          {type: ParagraphType.Paragraph, content: 'Qualia: definition and state of the art' },
-          {type: ParagraphType.Paragraph, content: 'Problematic' },
-          {type: ParagraphType.Title, content: 'I. Objective genealogy' },
-          {type: ParagraphType.Paragraph, content: 'Biological argument' },
-          {type: ParagraphType.Title, content: 'II. Relative genealogy' },
-          {type: ParagraphType.Paragraph, content: 'Relativity argument' },
-        ]
-      },
+      A1.get(), 
+      A2.get(),
+      A3.get(),
+    
       { title: 'JavaScript Quines',
         date: 'draft',
         body: [
