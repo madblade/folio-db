@@ -1,4 +1,5 @@
 import {ParagraphType} from './article';
+import {A0} from './thoughts-detail/art0';
 import {A1} from './thoughts-detail/art1';
 import {A2} from './thoughts-detail/art2';
 import {A3} from './thoughts-detail/art3';
@@ -10,6 +11,7 @@ export class Thoughts {
       A1.get(), 
       A2.get(),
       A3.get(),
+      A0.get(),
     
       { title: 'JavaScript Quines',
         date: 'draft',
