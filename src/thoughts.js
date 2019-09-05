@@ -8,10 +8,10 @@ export class Thoughts {
 
   static getArticles() {
     const articles = [
+      A0.get(),
       A1.get(), 
       A2.get(),
       A3.get(),
-      A0.get(),
     
       { title: 'JavaScript Quines',
         date: 'draft',
