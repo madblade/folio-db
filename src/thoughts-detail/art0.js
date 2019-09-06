@@ -2,7 +2,7 @@ import {ParagraphType} from '../article';
 export class A0 { static get() {
 const a1 = 
 { title: 'On values and principles',
-  date: 'draft',
+  date: '2019/09/05',
   author: 'm. s', 
   body: [
   	{type: ParagraphType.Title, content: 'Foreword' },
