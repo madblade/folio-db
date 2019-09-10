@@ -29,6 +29,21 @@ export class Craft {
         ]
       },
       {
+        title: 'Persistence Wasserstein solver',
+        date: '2019/09/10',
+        author: 'm.s',
+        body: [
+          {type: ParagraphType.Title, content: 'Links' },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://madblade.github.io/assignment-examples/">Demo</a>'
+          },
+          {type: ParagraphType.Title, content: 'About' },
+          {type: ParagraphType.Paragraph, content:
+              'An optimized solver for computing the discrete <a href="https://en.wikipedia.org/wiki/Wasserstein_metric">Wasserstein distance</a> between <a href="https://en.wikipedia.org/wiki/Persistent_homology">persistence diagrams</a>.'
+          }
+        ]
+      },
+      {
         title: 'Particle Tracing Demos',
         date: '2019/08/05',
         author: 'm.s',
