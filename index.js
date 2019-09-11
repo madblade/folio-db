@@ -19,7 +19,19 @@ let homepage   = Homepage.getArticles();
 let pieces     = Pieces.getArticles();
 let technical  = Technical.getArticles();
 let thoughts   = Thoughts.getArticles();
-               
+
+
+function generateArticleIds(arts, startIndex) {
+   for (let i = 0; i < arts.length; ++i) {
+      arts[i].id = i + startIndex;
+   }
+}
+generateArticleIds(homepage, 0);
+generateArticleIds(craft, 10000);
+generateArticleIds(pieces, 20000);
+generateArticleIds(technical, 30000);
+generateArticleIds(thoughts, 40000);
+
 let allArticles = [];
 allArticles.push(...homepage );
 allArticles.push(...craft    );
@@ -37,7 +49,7 @@ fs.writeFile(
 // Json all-titles
 let allTitles = [];
 for (let i = 0; i < allArticles.length; ++i) {
-   allArticles[i].id = i;
+   // allArticles[i].id = i;
    allTitles.push({
       'id': allArticles[i].id,
       'title': allArticles[i].title
