@@ -35,7 +35,13 @@ export class Craft {
         body: [
           {type: ParagraphType.Title, content: 'Links' },
           {type: ParagraphType.Paragraph, content:
-              '<a href="https://madblade.github.io/assignment-examples/">Demo</a>'
+              '<a href="https://madblade.github.io/assignment-examples/">Solver demo</a>'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://madblade.github.io/sparse-examples/">Matrix sparsity demo</a>'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://madblade.github.io/tracking-examples/">2D Feature tracking demo</a>'
           },
           {type: ParagraphType.Title, content: 'About' },
           {type: ParagraphType.Paragraph, content:

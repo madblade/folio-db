@@ -1,7 +1,7 @@
 import {ParagraphType} from '../article';
 export class AM1 { static get() {
 const am1 = 
-{ title: 'Why I want to work in the animation / game industry',
+{ title: 'Motivation statement',
   date: 'draft',
   author: 'm. s', 
   body: [
