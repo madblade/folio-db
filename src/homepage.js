@@ -17,7 +17,7 @@ export class Homepage {
               'with background in software development, topology, graphics, ' +
               'visualization and algorithms. I completed my PhD in  ' +
               'Computer Science from Sorbonne University in 2019 and ' +
-              'I am currently looking for a position the ' + 
+              'I am currently looking for a position in the ' + 
               'animation or video game industry. ' +
               'Hire me!'
           },
