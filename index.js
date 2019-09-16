@@ -21,16 +21,20 @@ let technical  = Technical.getArticles();
 let thoughts   = Thoughts.getArticles();
 
 
-function generateArticleIds(arts, startIndex) {
+function generateArticleIds(arts, startIndex, reverse) {
    for (let i = 0; i < arts.length; ++i) {
-      arts[i].id = i + startIndex;
+      // Reverse order cos I want to put last articles on top. 
+      if (reverse)
+         arts[i].id = (arts.length - i) + startIndex;
+      else
+         arts[i].id = i + startIndex;
    }
 }
-generateArticleIds(homepage, 0);
-generateArticleIds(craft, 10000);
-generateArticleIds(pieces, 20000);
-generateArticleIds(technical, 30000);
-generateArticleIds(thoughts, 40000);
+generateArticleIds(homepage, 0, false);
+generateArticleIds(craft, 10000, true);
+generateArticleIds(pieces, 20000, true);
+generateArticleIds(technical, 30000, true);
+generateArticleIds(thoughts, 40000, true);
 
 let allArticles = [];
 allArticles.push(...homepage );
