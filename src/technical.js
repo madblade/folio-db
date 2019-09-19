@@ -107,7 +107,7 @@ export class Technical {
         type: 'welcome',
         date: '2019/02/05',
         body: [
-          {type: ParagraphType.Image, content: 'assets/img/2.png'},
+          {type: ParagraphType.Image, content: 'assets/img/2.jpg'},
           {type: ParagraphType.Title, content: 'Introduction'},
           {type: ParagraphType.Paragraph, content:
               'This short article presents a method for rendering particles on the CPU, ' +

@@ -5,6 +5,24 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
+        title: 'Persistent homology on an example',
+        date: '2019/09/16',
+        author: 'm.s',
+        body: [
+          {type: ParagraphType.Title, content: 'Links' }, 
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://madblade.github.io/persistence/">Demo</a>'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://github.com/madblade/persistence/">Source code</a>'
+          },
+          {type: ParagraphType.Title, content: 'About' },
+          {type: ParagraphType.Paragraph, content:
+              'Short demo presenting basic concepts of 1D and 2D persistent homology on an example.'
+          }
+        ]
+      },
+      {
         title: 'Peg rectangle self-intersecting surface',
         date: '2019/09/16',
         author: 'm.s',
