@@ -11,7 +11,7 @@ export class Craft {
         body: [
           {type: ParagraphType.Title, content: 'Screen' },
           {type: ParagraphType.Image,
-            content: 'assets/craft/persistent.jpg'
+            content: 'assets/img/craft/persistent.jpg'
           },
           {type: ParagraphType.Title, content: 'Links' }, 
           {type: ParagraphType.Paragraph, content:
@@ -33,7 +33,7 @@ export class Craft {
         body: [
           {type: ParagraphType.Title, content: 'Screen' },
           {type: ParagraphType.Image,
-            content: 'assets/craft/peg.jpg'
+            content: 'assets/img/craft/peg.jpg'
           },
           {type: ParagraphType.Title, content: 'Links' }, 
           {type: ParagraphType.Paragraph, content:
@@ -55,10 +55,10 @@ export class Craft {
         body: [
           {type: ParagraphType.Title, content: 'Screens' },
           {type: ParagraphType.Image,
-            content: 'assets/craft/munk.jpg'
+            content: 'assets/img/craft/munk.jpg'
           },
           {type: ParagraphType.Image,
-            content: 'assets/craft/sparseandtrack.jpg'
+            content: 'assets/img/craft/sparseandtrack.jpg'
           },
           {type: ParagraphType.Title, content: 'Links' },
           {type: ParagraphType.Paragraph, content:
@@ -83,7 +83,7 @@ export class Craft {
         body: [
           {type: ParagraphType.Title, content: 'Screen' },
           {type: ParagraphType.Image,
-            content: 'assets/craft/particles12.jpg'
+            content: 'assets/img/craft/particles12.jpg'
           },
           {type: ParagraphType.Title, content: 'CPU-based particle tracing' },
           {type: ParagraphType.Paragraph, content:
@@ -108,7 +108,7 @@ export class Craft {
         body: [
           {type: ParagraphType.Title, content: 'Screen' },
           {type: ParagraphType.Image,
-            content: 'assets/craft/kanas.jpg'
+            content: 'assets/img/craft/kanas.jpg'
           },
           {type: ParagraphType.Title, content: 'Links' },
           {type: ParagraphType.Paragraph, content:
@@ -148,7 +148,7 @@ export class Craft {
         body: [
           {type: ParagraphType.Title, content: 'Screen' },
           {type: ParagraphType.Image,
-            content: 'assets/craft/2048.jpg'
+            content: 'assets/img/craft/2048.jpg'
           },
           {type: ParagraphType.Title, content: 'Links' },
           {type: ParagraphType.Paragraph, content:
