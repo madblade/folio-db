@@ -9,6 +9,10 @@ export class Craft {
         date: '2019/09/16',
         author: 'm.s',
         body: [
+          {type: ParagraphType.Title, content: 'Screen' },
+          {type: ParagraphType.Image,
+            content: 'assets/craft/persistent.jpg'
+          },
           {type: ParagraphType.Title, content: 'Links' }, 
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/persistence/">Demo</a>'
@@ -27,6 +31,10 @@ export class Craft {
         date: '2019/09/16',
         author: 'm.s',
         body: [
+          {type: ParagraphType.Title, content: 'Screen' },
+          {type: ParagraphType.Image,
+            content: 'assets/craft/peg.jpg'
+          },
           {type: ParagraphType.Title, content: 'Links' }, 
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/self-curve/">Demo</a>'
@@ -45,6 +53,13 @@ export class Craft {
         date: '2019/09/10',
         author: 'm.s',
         body: [
+          {type: ParagraphType.Title, content: 'Screens' },
+          {type: ParagraphType.Image,
+            content: 'assets/craft/munk.jpg'
+          },
+          {type: ParagraphType.Image,
+            content: 'assets/craft/sparseandtrack.jpg'
+          },
           {type: ParagraphType.Title, content: 'Links' },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/assignment-examples/">Solver demo</a>'
@@ -66,6 +81,10 @@ export class Craft {
         date: '2019/08/05',
         author: 'm.s',
         body: [
+          {type: ParagraphType.Title, content: 'Screen' },
+          {type: ParagraphType.Image,
+            content: 'assets/craft/particles12.jpg'
+          },
           {type: ParagraphType.Title, content: 'CPU-based particle tracing' },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/particles-2d-cpu/">Demo</a>'
@@ -87,6 +106,10 @@ export class Craft {
         date: '2019/08/05',
         author: 'm.s',
         body: [
+          {type: ParagraphType.Title, content: 'Screen' },
+          {type: ParagraphType.Image,
+            content: 'assets/craft/kanas.jpg'
+          },
           {type: ParagraphType.Title, content: 'Links' },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/kanalearn/">Learn kana</a>'
@@ -123,6 +146,10 @@ export class Craft {
         date: '2019/07/29',
         author: 'm.s',
         body: [
+          {type: ParagraphType.Title, content: 'Screen' },
+          {type: ParagraphType.Image,
+            content: 'assets/craft/2048.jpg'
+          },
           {type: ParagraphType.Title, content: 'Links' },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/2048-3D/">Demo</a>'
@@ -135,10 +162,6 @@ export class Craft {
               'A little 3D extension to the mini-game by ' +
               '<a href="https://github.com/gabrielecirulli">@gabrielecirulli</a> ' +
               'made in 3 days.'
-          },
-          {type: ParagraphType.Title, content: 'Screens' },
-          {type: ParagraphType.Image,
-            content: 'https://raw.githubusercontent.com/madblade/2048-3D/master/static/screens/1.png'
           }
         ]
       }
