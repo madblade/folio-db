@@ -23,10 +23,10 @@ export class Technical {
         body: [
           {type: ParagraphType.Title, content: 'Introduction'},
           {type: ParagraphType.Paragraph, content:
-              'Here are a few short paragraphs concerning topology, heavily inspired by <a href="https://www.3blue1brown.com/">3Blue1Brown</a>, that I initially intended to put in my dissertation as an introductory discussion. As it is basically a rephrasing of 3Blue1Brown\'s enlightening work, I will just put it here before I accidentally delete it. '
+              'Here are a few short paragraphs concerning topology, heavily inspired by <a href="https://www.3blue1brown.com/">3Blue1Brown</a>, that I initially intended to put in my dissertation as an introductory discussion. '
           },
           {type: ParagraphType.Paragraph, content:
-              'Topology investigates the fundamental structural properties of objects, that can be identified by looking at the said object regardless of any geometrical representation or measure. For that purpose, <i>homeomorphism</i> is a central concept, based on the notion of continuity, that allows to construct a topological characterization, so as to group objects, called <i>topological spaces</i>, in equivalence classes. Nonetheless, it proves quite difficult in practice to demonstrate that two objects are homeomorphic using only continuity. Topologists would rather make use of the concept of <i>invariants</i>, which are computable quantities or algebraic structures that stay the same for all objects that are homeomorphic to one another. It can be seen as a way to introduce back the concept of measure, in a more fundamental sense, to study topological objects. '
+              'Topology investigates the fundamental structural properties of objects, that can be identified by looking at the said object regardless of any geometrical representation or measure. For that purpose, <i>homeomorphism</i> is a central concept, based on the notion of continuity, that allows to construct a topological characterization, so as to group objects, called <i>topological spaces</i>, in equivalence classes. Nonetheless, it proves quite difficult in practice to demonstrate that two objects are homeomorphic using only continuity. Topologists would rather make use of the concept of <i>invariants</i>, which are computable quantities (or algebraic structures) that stay the same for all objects that are homeomorphic to one another. It can be seen as a way to introduce back the concept of measure, in a more fundamental sense, to study topological objects. '
           },
           {type: ParagraphType.Paragraph, content:
               'In the following, we will try to give some insights about what topology can actually do, based on two concrete examples, for readers who are not necessarily well acquainted with the subject; this is the occasion to present some of its core concepts in a non-formal manner. '
@@ -77,7 +77,7 @@ export class Technical {
           },
 
           {type: ParagraphType.Paragraph, content:
-              'Remark that the choice of two cuts that yield three fragments is equivalent to the choice of three positive numbers <small>$a$</small>, <small>$b$</small> and <small>$c$</small> so that <small>$a+b+c=1$</small>. Then, the choice of an assignment of those fragments between two partners is equivalent to give the numbers <small>$a$</small>, <small>$b$</small> and <small>$c$</small> two possible states, say <i>Alice</i> or <i>Bob</i>. Ingeniously, one could simultaneously represent the choice of two cuts of <small>$I$</small> and their assignment in the following manner: choose three numbers <small>$x$</small>, <small>$y$</small> and <small>$z$</small>, so that <small>$x^2+y^2+z^2=1$</small>, with <small>$x^2$</small>, <small>$y^2$</small> and <small>$z^2$</small> defining the lengths of fragments, and the sign of <small>$x$</small>, <small>$y$</small> and <small>$z$</small> defining an assignment of the fragments (say positive for Alice and negative for Bob). Notice <small>$x^2+y^2+z^2=1$</small> is actually the equation of a (two-)sphere in <small>$\\mathbb{R}^3$</small> centered at the origin, so every point on the sphere corresponds to two cuts and an assignment. Swapping a given assignment of fragments between Alice and Bob amounts to reverting the sign of <small>$x$</small>, <small>$y$</small> and <small>$z$</small>, so <i>antipodal</i> points on the sphere correspond to swapped assignments. '
+              'Remark that the choice of two cuts that yield three fragments is equivalent to the choice of three positive numbers <small>$a$</small>, <small>$b$</small> and <small>$c$</small> so that <small>$a+b+c=1$</small>. Then, the choice of an assignment of those fragments between two partners is equivalent to give the numbers <small>$a$</small>, <small>$b$</small> and <small>$c$</small> two possible states, say <i>Alice</i> or <i>Bob</i>. Ingeniously, one could simultaneously represent the choice of two cuts of <small>$I$</small> and their assignment in the following manner: choose three numbers <small>$x$</small>, <small>$y$</small> and <small>$z$</small>, so that <small>$x^2+y^2+z^2=1$</small>, with <small>$x^2$</small>, <small>$y^2$</small> and <small>$z^2$</small> defining the lengths of fragments, and the sign of <small>$x$</small>, <small>$y$</small> and <small>$z$</small> defining an assignment of the fragments (say positive for Alice and negative for Bob). Notice that <small>$x^2+y^2+z^2=1$</small> is actually the equation of a (two-)sphere in <small>$\\mathbb{R}^3$</small> centered at the origin, so every point on the sphere corresponds to two cuts and an assignment. Swapping a given assignment of fragments between Alice and Bob amounts to reverting the sign of <small>$x$</small>, <small>$y$</small> and <small>$z$</small>, so <i>antipodal</i> points on the sphere correspond to swapped assignments. '
           },
           {type: ParagraphType.Paragraph, content:
               'In this setup, remember that every point on the sphere is associated with the length of each color given to Alice (Fig. 3, right). Then, if two antipodal points give the same length of each color to Alice, then they correspond to a balanced assignment of colors. But do such antipodal points exist? The important topological fact, mentioned earlier, actually gives the answer to this question: '
@@ -88,21 +88,20 @@ export class Technical {
           },
 
           {type: ParagraphType.Paragraph, content:
-              'Less formally, it states that if one defines a continuous <i>vector field</i> on the surface of a sphere, then the sphere admits a pair of antipodal points having exactly the same vector field value. For example, the Borsuk-Ulam theorem assures us that there exists a pair of diametrically opposed points on the surface of the Earth where the pressure and temperature are precisely the same. '
+              'Less formally, it states that if one defines a continuous <i>vector field</i> on the surface of a sphere, then the sphere admits a pair of antipodal points having exactly the same vector field value. For example, the Borsuk-Ulam theorem assures us that there exists a pair of diametrically opposed points on the surface of the Earth where the pressure and temperature are precisely the same (given pressure and temperature fields are two-dimensional and continuous). '
           },
           {type: ParagraphType.Paragraph, content:
               'Now considering the function <small>$f$</small> which takes the points on the sphere as an input (corresponding to two cuts and an assignment), and outputs a couple <small>$(c_1,c_2)$</small>, indicating the length of each color given to Alice, <small>$f$</small> is continuous, and we have all the ingredients to conclude that two cuts at most are necessary to split the necklace evenly. This approach using the Borsuk-Ulam theorem generalizes to higher dimensions [Alon 1986], i.e. for necklaces with a higher number of colors. '
           },
           {type: ParagraphType.Paragraph, content: 
-            'As illustrated with this more practical example, Topology can indeed provide insights about spaces as well as functions defined on spaces. In engineering and scientific applications, large volumes of data are often found in the form of a well-known (geometrical or topological) space, on which <i>scalar fields</i> or <i>vector fields</i> are defined. The question often asked is to analyze the properties of such fields. Interestingly, apart from the Borsuk-Ulam theorem, there are other deep relations between functions and the space on which they are defined. The field of Morse theory, mentioned earlier, precisely examines this relationship. It relies on the central notions of <i>manifold</i>, <i>continuity</i>, <i>homeomorphism</i>, <i>critical points</i>. '
+            'As illustrated with this more practical example, Topology can indeed provide insights about spaces as well as functions defined on spaces. In engineering and scientific applications, large volumes of data are often found in the form of a well-known (geometrical or topological) space, on which <i>scalar fields</i> or <i>vector fields</i> are defined. The question often asked is to analyze the properties of such fields. Interestingly, apart from the Borsuk-Ulam theorem, there are other deep relations between functions and the space on which they are defined. The field of Morse theory, mentioned earlier, precisely examines this relationship. It relies on the central notions of <i>manifold</i>, <i>continuity</i>, <i>homeomorphism</i>, and <i>critical points</i>. '
           }
-
         ]
       },
 
       {
         // id: -2,
-        title: 'CPU-based 2D particle tracing',
+        title: '2D vector fields with CPU particle tracing',
         author: 'm.s',
         type: 'welcome',
         date: '2019/02/05',
@@ -110,11 +109,12 @@ export class Technical {
           {type: ParagraphType.Image, content: 'assets/img/2.jpg'},
           {type: ParagraphType.Title, content: 'Introduction'},
           {type: ParagraphType.Paragraph, content:
-              'This short article presents a method for rendering particles on the CPU, ' +
-              'which is easy to implement but not quite adapted for real-time graphics, ' +
+              'This short article introduces the concept of <i>vector field</i>, ' +
+              'and presents a method for rendering vector fields using particles on the CPU. ' +
+              'This method is easy to implement but not quite adapted for real-time graphics, ' +
               'as the CPU may be put to more profitable use. '
           },
-          {type: ParagraphType.Title, content: 'I. Particle-based visualization and unsteady vector fields'},
+          {type: ParagraphType.Title, content: 'I. Vector fields and particle-based visualization'},
           {type: ParagraphType.Paragraph, content:
               'The visual shown above was obtained with a basic technique called particle advection. ' +
               'It has been used for wind visualization in the browser for quite some time, ' +
@@ -127,10 +127,10 @@ export class Technical {
               'associates every position in the domain with a distinct vector. ' +
               'Continuous vector fields can be used to represent flow. ' +
               'For instance, when looking at the earth from a very high altitude, wind can be seen ' +
-              'as a 2D vector field defined on the Earth\'s 2D surface, ' +
-              'considering the atmosphere\'s height is negligible. ' +
-              'If the vector field stays the same throughout time, it is called steady. ' +
-              'If not, it is called unsteady. '
+              'as a 2D vector field defined on the Earth’s 2D surface, ' +
+              'considering the atmosphere’s height is negligible. ' +
+              'If the vector field stays the same throughout time, it is called <i>steady</i>. ' +
+              'If not, it is called <i>unsteady</i>. '
           },
           {type: ParagraphType.Paragraph, content:
               'There are different ways to get visual insights about vector fields: ' +
@@ -138,7 +138,7 @@ export class Technical {
               'the flow; ' +
               'texture advection techniques such as the ' +
               '<a href="https://en.wikipedia.org/wiki/Line_integral_convolution">' +
-              'LIC</a> which "combines" random noise with the vector field; ' +
+              'LIC</a> which “combines” random noise with the vector field; ' +
               'extraction of integral curves such as ' +
               '<a href="https://en.wikipedia.org/wiki/Streamlines,_streaklines,_and_pathlines">' +
               'streamlines, pathlines, timelines, streaklines</a>; ' +
@@ -150,42 +150,43 @@ export class Technical {
               'The latter is akin to progressively tracing randomly seeded pathlines. '
           },
           {type: ParagraphType.Paragraph, content:
-              'Computing the field\'s topology may provide further insight. ' +
+              'Computing the field’s topology may provide further insight. ' +
               'Broadly speaking, it allows to track singularities in the flow, ' +
-              'or to identify geometric zones where the flow\'s behaviour is homogeneous. ' +
+              'or to identify geometric zones where the flow’s behaviour is homogeneous. ' +
               'The most important singularities are often called <i>critical points</i>. ' +
               'These may correspond, for instance, to the center of vortices. '
           },
 
-          {type: ParagraphType.Title, content: 'II. Making up a vector field'},
+          {type: ParagraphType.Title, content: 'II. Defining a vector field'},
           {type: ParagraphType.Paragraph, content:
-              'When someone wants to draw a cute visual just for the sake of ' +
+              'When one wants to draw a beautiful visual just for the sake of ' +
               'it, they do not really care whether the underlying dynamics ' +
               'are physically realistic or not. ' +
               'Rather, staring at those wind maps for a while must have one realize ' +
-              'that what\'s captivating about them ' +
+              'that what is captivating about them ' +
               'dwells in their peaceful rotation and lack of symmetry. '
           },
           {type: ParagraphType.Paragraph, content:
-              'So let\'s set up a vector field on a small rectangular geometric domain. ' +
-              'The field would be generated by a fixed number of vortices. ' +
+              'So let’s set up a vector field on a small rectangular geometric domain. ' +
+              'The field is generated by a fixed number of vortices. ' +
               'Every vortex that shall be thrown into the domain should have ' +
               'two properties: a range ' +
               'defining the span of its influence zone, and an intensity ' +
-              'defining how strong the vector field would be near it. ' +
-              'The sign of the intensity term would determine whether ' +
-              'the field would spin clockwise or counter-clockwise.'
+              'defining how “strong” the vector field’s influence is. ' +
+              'The sign of the intensity term determines whether ' +
+              'the field “spins” clockwise or counter-clockwise.'
           },
           {type: ParagraphType.Equation, content:
               '\\mathbf{v} = \\mathbf{p} \\times (\\mathbf{z} \\cdot \\text{intensity} ' +
               '\\cdot e^{- \\frac{1}{\\text{range}} \\cdot \\lVert \\mathbf{p} \\rVert }) '
           },
           {type: ParagraphType.Paragraph, content:
-              'For one single vortex, this formula gives v, a three-dimensional (!) vector, ' +
-              'for any position p, when the origin is taken ' +
-              'at the only vortex. The vector z denotes the unit vector orthogonal ' +
-              'to the domain; the multiplicative symbol denotes the cross product. ' +
-              'Take the first two coordinates of v to get the desired ' +
+              'For one single vortex, this formula gives <small>$\\mathbf{v}$</small>, a three-dimensional (!) vector, ' +
+              'for any position <small>$\\mathbf{p}$</small>, when the origin is taken ' +
+              'at the only vortex. The vector <small>$\\mathbf{z}$</small> denotes the unit vector orthogonal ' +
+              'to the domain; the multiplicative symbol denotes the ' +
+              '<a href="https://en.wikipedia.org/wiki/Cross_product">cross product</a>. ' +
+              'Take the first two coordinates of <small>$\\mathbf{v}$</small> to get the desired ' +
               'two-dimensional vector. ' +
               'Now the only remaining task is to add the contribution of multiple vortices. '
           },
@@ -193,9 +194,9 @@ export class Technical {
               '\\mathbf{V} = \\sum_{\\text{vortices}} \\mathbf{v}'
           },
           {type: ParagraphType.Paragraph, content:
-              'V is the resulting vector field. ' +
+              '<small>$\\mathbf{V}$</small> is the resulting vector field. ' +
               'This is just a simple sum of the contributions of all vortices. ' +
-              'Bear in mind that p is distinct for every vortex. ' +
+              'Bear in mind that <small>$\\mathbf{p}$</small> is distinct for every vortex. ' +
               'When computing this sum in practice, ' +
               'the intensity decay due to the exponential factor ' +
               'makes it possible to use lookup structures to not ' +
@@ -203,16 +204,17 @@ export class Technical {
               ''
           },
 
-          {type: ParagraphType.Title, content: 'III. Particles everywhere'},
+          {type: ParagraphType.Title, content: 'III. Moving particles around'},
           {type: ParagraphType.Paragraph, content:
               'This is the easiest part. ' +
               'No need to care about anything in particular here, ' +
-              'just crazily add thousands of particles, ' +
+              'just crazily add thousands of particles at random locations, ' +
               'and make them follow the flow. ' +
-              'The position x of a particle at a given frame ' +
-              'should be updated the next frame so that ' +
+              'The position <small>$\\mathbf{x}$</small> of a particle at a given frame ' +
+              'is updated the next frame so that ' +
               'its new position equals the old position plus ' +
-              'the value of the vector field at its old position. '
+              'the value of the vector field at its old position. ' +
+              'This is called the <a href="https://en.wikipedia.org/wiki/Euler_method">forward Euler method</a>.'
           },
           {type: ParagraphType.Equation, content:
               '\\mathbf{x}(t+1) = \\mathbf{x}(t) + \\mathbf{V}(\\mathbf{x}(t))'
@@ -228,29 +230,29 @@ export class Technical {
               'query meteorological servers to get precomputed wind ' +
               'velocity fields. Then the actual value of the field at a given ' +
               'point is interpolated between known neighbour values. ' +
-              'This works well for steady fields.'
+              'This works well for <i>steady</i> fields.'
           },
           {type: ParagraphType.Paragraph, content:
               'However, initially building the field and ' +
               'computing interpolations are expensive. ' +
-              'Good news! There\'s no need to do any of that ' +
-              'with the kind of vector field described in section II. ' +
-              'This makes it actually possible to render <i>unsteady</i> ' +
-              'vector fields, taking some precautions though. ' +
+              'Good news! There’s no need to do any of that ' +
+              'with the kind of vector field described in section II (which is simple, smooth and analytical). ' +
+              'This makes it actually possible to render an <i>unsteady</i> version ' +
+              'of that field, taking some precautions. ' +
               'A simple adjustment can be made to the model, so that ' +
-              'for instance vortices can move through the domain. ' +
+              'for instance vortices can move inside the domain. ' +
               'This would not change anything concerning the ' +
               'computation of particles. '
           },
           {type: ParagraphType.Paragraph, content:
-              'The drawback is that vortices must move consequently ' +
+              'The drawback is that the center of vortices must move consequently ' +
               'slower than particles, so that particles actually capture ' +
               'the state of the vector field at a given time. ' +
               'An attractive force between punctual particles is out of ' +
               'the question because there would be occasional ' +
               'outbursts in vortex velocities due to couples of vortices ' +
-              'passing near one another. ' +
-              'Repulsive forces seem better suited, for example in the following form. '
+              'passing near one another (such as stars traveling near massive objects). ' +
+              'Repulsive forces seem better suited, for example in the following form: '
           },
           {type: ParagraphType.Equation, content:
               '\\mathbf{x}(t+1) = \\mathbf{x}(t) + ' +
@@ -261,28 +263,26 @@ export class Technical {
           {type: ParagraphType.Paragraph, content:
               'The evolution of vortex positions is summarized ' +
               'in the equation above by putting together ' +
-              'Newton\'s second law of motion and Newton\'s law of universal gravitation, ' +
-              'approximated using the simple Euler ' +
+              'Newton’s second law of motion and Newton’s law of universal gravitation, ' +
+              'approximated using the forward Euler ' +
               'method with time-steps of duration 1. ' +
               'Gravitation is made repulsive by using the appropriate convention ' +
-              'for the orientation of d; in this case, it should be oriented from ' +
-              'the vortex <i>i</i> to the vortex whose position is being updated. '
+              'for the orientation of <small>$//mathbf{d}$</small>; in this case, it is oriented from ' +
+              'the vortex <small>$i$</small> to the vortex whose position is being updated. '
           },
           {type: ParagraphType.Paragraph, content:
               'Repulsion is also necessary at the border to prevent ' +
               'all the vortices from flying away. ' +
-              'Besides, to avoid a weird resonance problem that would deserve a ' +
-              'full technical article, ' +
-              'near the border clockwise vortices are forced to move around the domain ' +
-              'in a clockwise fashion; inversely for counter-clockwise ones. '
+              'Besides, to avoid the system to get stuck into an oscillating state that would deserve a ' +
+              'separate discussion, ' +
+              'clockwise vortices are forced to move around the domain ' +
+              'in a clockwise fashion when they are nearing the border; conversely for counter-clockwise vortices. '
           },
 
           {type: ParagraphType.Title, content: 'V. User interaction'},
           {type: ParagraphType.Paragraph, content:
-              'Why bother working with unsteady fields ' +
-              'since they require additional computations? ' +
-              'The essential characteristic of such vector fields is that they evolve throughout time; therefore, ' +
-              'they can be interacted with by the beholder, allowing for user interaction.'
+              'The essential characteristic of unsteady vector fields is that they evolve with time; therefore, ' +
+              'they can be tinkered with by the user.'
           },
           {type: ParagraphType.Paragraph, content:
               'In the proposed example, two simple actions are possible. ' +
@@ -291,21 +291,25 @@ export class Technical {
               'from the cursor. In the newly available free space, ' +
               'the user may right-click to form a new clockwise vortex, or ' +
               'left-click to form a counter-clockwise one. Holding the ' +
-              'click shall make the vortex grow in intensity and range. '
+              'makes the vortex grow in intensity and range. '
+          },
+         {type: ParagraphType.Paragraph, content:
+              'The limitation mentioned in section IV appears clearly thenceforth: ' +
+              'if the user drags the mouse cursor around too quickly, then particles do not have time to swirl around and ' +
+              'correctly capture how the vector field evolves. '
           },
 
           {type: ParagraphType.Title, content: 'VI. Canvas: the decay hack'},
           {type: ParagraphType.Paragraph, content:
-              'The art of Graphics ' +
-              'carries a long tradition of clever hacks. ' +
-              'The following one is quite simple and may not deserve to be called a "hack", but ' +
+              'The art of graphics carries a long tradition of clever hacks. ' +
+              'The following one is quite simple and may not deserve to be called a “hack”, but ' +
               'is still quite interesting. ' +
-              'HTML\'s Canvas ships functions that allow to draw lines: ' +
-              '"moveTo", which sort of moves the virtual pencil Canvas draws with, ' +
-              'and "lineTo", which effectively draws the line from the previous pencil location. ' +
+              'HTML’s Canvas ships functions that allow to draw lines: ' +
+              '“moveTo”, which sort of moves the virtual pencil Canvas draws with, ' +
+              'and “lineTo”, which effectively draws the line from the previous pencil location. ' +
               'When all the lines in a frame have been drawn, and the frame has been rendered, ' +
               'there is no function to get back whatever was drawn then, so no way to quickly apply ' +
-              'opacity on lines that would be ready and waiting, so to speak. ' +
+              'opacity on lines that would be “ready and waiting,” so to speak. ' +
               'The idea then instead of expensively softening all trails ' +
               'is to just draw a white rectangle with low opacity on the full Canvas so that ' +
               'all previously rendered segments progressively disappear as new frames are drawn. '
@@ -314,17 +318,17 @@ export class Technical {
       },
 
       {
-        title: 'Spearman\'s correlation for dummies',
+        title: 'Spearman’s correlation formula',
         author: 'm.s',
         date: '2019/01/10',
         body: [
           {type: ParagraphType.Title, content: 'I. Context'},
           {type: ParagraphType.Paragraph, content:
               'This article is ' +
-              'about two supposedly equivalent formulations of ' +
+              'about two equivalent formulations of ' +
               'a rank correlation coefficient, ' +
               '<a href="https://en.wikipedia.org/wiki/Spearman%27' +
-              's_rank_correlation_coefficient">Spearman\'s rho</a>. ' +
+              's_rank_correlation_coefficient">Spearman’s rho</a>. ' +
               'The claim is as follows: '
           },
           {type: ParagraphType.Equation, content:
@@ -332,22 +336,22 @@ export class Technical {
               '1 - \\frac{6 \\sum_i(y_i-x_i)^2}{n(n^2-1)}'
           },
           {type: ParagraphType.Paragraph, content:
-              'This is apparently quite well-known in statistics, to the point that ' +
+              'This is quite well-known in statistics, to the point that ' +
               'the right handside deserves to be called a popular formula. ' +
-              'The purpose of this article is to offer a bit of context to it, ' +
+              'The purpose of this article is to offer a bit of context, ' +
               'unroll the demonstration step by step in a very detailed manner, ' +
-              'review some basic statistics, and test equation rendering on this blog. '
+              'review some basic statistics <s>and test equation rendering on this blog</s>. '
           },
           {type: ParagraphType.Title, content: 'II. Rank correlation'},
           {type: ParagraphType.Paragraph, content:
-              'Spearman\'s rho measures the similarity between two ' +
-              'rankings. When <i>x</i> and <i>y</i> are ranking variables, ' +
-              'that is, two lists of <i>n</i> elements ' +
-              'where the <i>i</i><sup> th</sup> element gives the rank of a specific ' +
+              'Spearman’s rho measures the similarity between two ' +
+              'rankings. When <small>$x$</small> and <small>$y$</small> are ranking variables, ' +
+              'that is, two lists of <small>$n$</small> elements ' +
+              'where the <small>$i^{th}$</small> element gives the rank of a specific ' +
               'entity, rho is the ' +
               '<a href="https://en.wikipedia.org/wiki/Pearson_correlation_coefficient">' +
-              'bivariate correlation</a> between <i>x</i> and <i>y</i>. ' +
-              'In other words, it is the covariance of <i>x</i> and <i>y</i> ' +
+              'bivariate correlation</a> between <small>$x$</small> and <small>$y$</small>. ' +
+              'In other words, it is the covariance of <small>$x$</small> and <small>$y$</small> ' +
               'divided by the product of their standard deviation. '
           },
           {type: ParagraphType.Equation, content:
@@ -386,7 +390,8 @@ export class Technical {
           },
           {type: ParagraphType.Paragraph, content:
               'The expected value of a variable is just its probability-weighted average, so, ' +
-              'taking <i>i</i> ranging from 1 to <i>n</i> for indexing possible values of <i>x</i> and <i>y</i>, ' +
+              'taking <small>$i$</small> ranging from <small>$1$</small> to <small>$n$</small> ' +
+              'for indexing possible values of <small>$x$</small> and <small>$y$</small>, ' +
               'numerator and denominator are computed as follows: '
           },
           {type: ParagraphType.Equation, content:
@@ -408,7 +413,7 @@ export class Technical {
           {type: ParagraphType.Paragraph, content:
               'Keep in mind, we are working with two variables that represent the ' +
               'ranking of some fixed collection of entities. ' +
-              'Assuming there are no ties in either ranking, Spearman\'s rho can be simplified. ' +
+              'Assuming there are no ties in either ranking, Spearman’s rho can be simplified. ' +
               'First thing to notice is how the means are constant: '
           },
           {type: ParagraphType.Equation, content:
@@ -448,7 +453,7 @@ export class Technical {
           },
           {type: ParagraphType.Paragraph, content:
               'Now looking at the numerator, distributing the product should yield three constant ' +
-              'terms and another one, a product between <i>x</i> and <i>y</i>, which the original ' +
+              'terms and another one, a product between <small>$x$</small> and <small>$y$</small>, which the original ' +
               'question asked to ' +
               'express in terms of their difference. '
           },
@@ -571,37 +576,37 @@ export class Technical {
         validated: true
       },
 
-      { title: 'JavaScript Quines',
-        date: 'draft',
-        body: [
-          {type: ParagraphType.Title, content: 'Introduction' },
-          {type: ParagraphType.Paragraph, content: 'Quines: definition' },
-          {type: ParagraphType.Paragraph, content: 'Problematic' },
-          {type: ParagraphType.Title, content: 'I. Readable quines' },
-          {type: ParagraphType.Code, language: 'javascript',
-              content:
-                '(function quine(){\n' +
-                '  console.log(\'(\' + quine.toString() + \')();\');\n' +
-                '})();'
-            },
-          {type: ParagraphType.Code, language: 'javascript',
-              content:
-                '!function $(){console.log(\'!\'+$+\'()\')}()\n'
-          },
-          {type: ParagraphType.Paragraph, content: 'Discussion' },
-          {type: ParagraphType.Title, content: 'II. Golfed quines' },
-          {type: ParagraphType.Code, language: 'javascript',
-            content:
-              '$=_=>`$=${$};$()`;$()'
-          },
-          {type: ParagraphType.Paragraph, content: 'Discussion' },
-          {type: ParagraphType.Code, language: 'javascript',
-            content:
-              '(_=$=>`(_=${_})()`)()'
-          },
-          {type: ParagraphType.Paragraph, content: 'Discussion' },
-        ]
-      },
+      // { title: 'JavaScript Quines',
+      //   date: 'draft',
+      //   body: [
+      //     {type: ParagraphType.Title, content: 'Introduction' },
+      //     {type: ParagraphType.Paragraph, content: 'Quines: definition' },
+      //     {type: ParagraphType.Paragraph, content: 'Problematic' },
+      //     {type: ParagraphType.Title, content: 'I. Readable quines' },
+      //     {type: ParagraphType.Code, language: 'javascript',
+      //         content:
+      //           '(function quine(){\n' +
+      //           '  console.log(\'(\' + quine.toString() + \')();\');\n' +
+      //           '})();'
+      //       },
+      //     {type: ParagraphType.Code, language: 'javascript',
+      //         content:
+      //           '!function $(){console.log(\'!\'+$+\'()\')}()\n'
+      //     },
+      //     {type: ParagraphType.Paragraph, content: 'Discussion' },
+      //     {type: ParagraphType.Title, content: 'II. Golfed quines' },
+      //     {type: ParagraphType.Code, language: 'javascript',
+      //       content:
+      //         '$=_=>`$=${$};$()`;$()'
+      //     },
+      //     {type: ParagraphType.Paragraph, content: 'Discussion' },
+      //     {type: ParagraphType.Code, language: 'javascript',
+      //       content:
+      //         '(_=$=>`(_=${_})()`)()'
+      //     },
+      //     {type: ParagraphType.Paragraph, content: 'Discussion' },
+      //    ]
+      //  },
       
       // {
       //   title: 'Example code',

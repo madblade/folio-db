@@ -4,7 +4,7 @@ export class Pieces {
 
   static getArticles() {
     const articles = [
-      { title: 'Simon Stalenhag\'s flooded paintings',
+      { title: 'Simon Stalenhag’s flooded paintings',
         date: '2019/02/24',
         author: 'slw',
         body: [
@@ -20,7 +20,7 @@ export class Pieces {
           },
           {type: ParagraphType.Paragraph, content:
               'Regardless of the praise and upcoming adaptations, ' +
-              'there is something oddly magnetic to Stalenhag\'s original illustrations. ' +
+              'there is something oddly magnetic to Stalenhag’s original illustrations. ' +
               'Somehow, they feel intimate and connected, ' +
               'as if the impressions they give could have been memories ' +
               'and the observer wanted to make sense of them. ' +
@@ -32,7 +32,7 @@ export class Pieces {
               'This is also a very good example of how making the familiar unfamiliar, ' +
               'for instance by mixing vintage objects with futuristic thematics, ' +
               'can achieve a visceral sensation of connection. ' +
-              'Here is a sample of Stalenhag\'s work.'
+              'Here is a sample of Stalenhag’s work.'
           },
           {type: ParagraphType.Title, content: 'Seminal illustrations'},
           {type: ParagraphType.Image, content: 'assets/img/pieces/stalenhag/1.jpg'},
@@ -62,13 +62,22 @@ export class Pieces {
           {type: ParagraphType.Title, content: 'The artist'},
           {type: ParagraphType.Paragraph, content:
               '<a href="https://en.wikipedia.org/wiki/Anatoly_Fomenko">Anatoly Fomenko</a> ' +
-              'is the live illustration of the following two facts: ' +
-              '1. mathematicians can do art and 2. renowned ' +
-              'scientists can talk nonsense and put ' +
+              'is a perfect example of the following two facts: ' +
+              '1. scientists can do art and 2. they can also ' +
+              'talk nonsense and put ' +
               '<i><a href="https://en.wikipedia.org/wiki/New_Chronology_(Fomenko)">' +
               'substantial effort</a></i> into it. ' +
-              'Fomenko\'s wicked mathematical landscapes are filled with ghastly wraiths, ' +
+              'Fomenko’s wicked mathematical landscapes are filled with ghastly wraiths, ' +
               'as emanations from an abyss that was stared at for too long. '
+          },
+          {type: ParagraphType.Paragraph, content:
+              'The following pieces each illustrate a distinct concept in physics or mathematics, ' +
+              'such as <a href="https://en.wikipedia.org/wiki/Fluid_dynamics">fluid flow</a> and ' +
+              '<a href="https://en.wikipedia.org/wiki/Rigid_body">rigid body</a> motion in mechanics; ' +
+              'the <a href="https://en.wikipedia.org/wiki/Alexander_horned_sphere">Alexander horned sphere</a> and ' +
+              'the <a href="https://en.wikipedia.org/wiki/Mapping_cylinder">mapping cylinder</a> in topology; ' +
+              'or more arcane techniques such as the method of killing spaces to compute ' +
+              '<a href="https://en.wikipedia.org/wiki/Homotopy_groups_of_spheres"> homotopy groups</a>.'
           },
 
           {type: ParagraphType.Title, content: 'Seminal work'},

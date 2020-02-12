@@ -41,20 +41,20 @@ export class Homepage {
               'My interests: animation, tales, music, ' +
               'epistemology, sociology, metaphysics. '
           },
-          {type: ParagraphType.Title, content: 'About this website'},
-          {type: ParagraphType.Paragraph, content:
-            'As outlined in Raph Koster\'s ' +
-              '<a href="https://www.youtube.com/watch?v=zyVTxGpEO30">2017 GDC talk</a>, ' +
-              'creativity hardly ever comes out of the blue: ' +
-              'everything in the flow of human creation has to be inspired by something else, ' +
-              'since humans share environment, history and ' +
-              '<a href="https://www.nature.com/news/most-europeans-share-recent-ancestors-1.12950">ancestry</a>. ' +
-              'Drawing inspiration from Sam Hughes\' <a href="https://qntm.org">delightful blog</a>, ' +
-              'this place was originally intended to compile ' +
-              'a medley of harebrained technical ideas, ' +
-              'visual javascript demos, random thoughts ' +
-              'and other things hardly worthy of interest. '
-          },
+        //  {type: ParagraphType.Title, content: 'About this website'},
+        //  {type: ParagraphType.Paragraph, content:
+        //    'As outlined in Raph Koster\'s ' +
+        //      '<a href="https://www.youtube.com/watch?v=zyVTxGpEO30">2017 GDC talk</a>, ' +
+        //      'creativity hardly ever comes out of the blue: ' +
+        //      'everything in the flow of human creation has to be inspired by something else, ' +
+        //      'since humans share environment, history and ' +
+        //      '<a href="https://www.nature.com/news/most-europeans-share-recent-ancestors-1.12950">ancestry</a>. ' +
+        //      'Drawing inspiration from Sam Hughes’ <a href="https://qntm.org">delightful blog</a>, ' +
+        //      'this place was originally intended to compile ' +
+        //      'a medley of harebrained technical ideas, ' +
+        //      'visual javascript demos, random thoughts ' +
+        //      'and other things hardly worthy of interest. '
+        //  },
         ]
       },
 
