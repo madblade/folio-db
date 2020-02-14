@@ -3,7 +3,8 @@ export class A0 { static get() {
 const a1 = 
 { title: 'Values are everywhere',
   date: '2019/09/05',
-  author: 'm. s', 
+  author: 'M. S',
+  thumb: 'assets/img/craft/spock.jpg',
   body: [
   	{type: ParagraphType.Title, content: 'Foreword' },
     {type: ParagraphType.Paragraph, content: 'The realm of moral philosophy is an odd one to venture to: most of the questions raised there are fated to remain partially open. In the following, we will explore some interesting ideas drawing from a quote by E. Klein. ' },

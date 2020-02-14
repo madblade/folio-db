@@ -1,7 +1,7 @@
 var fs = require('fs');
 
 import { Craft } from './src/craft';
-import { Homepage } from './src/homepage';
+// import { Homepage } from './src/homepage';
 import { Pieces } from './src/pieces';
 import { Technical } from './src/technical';
 import { Thoughts } from './src/thoughts';
@@ -15,7 +15,7 @@ let logfn = err => err ? console.log(err) : console.log('file saved');
 
 let categories = Categories.getCategories();
 let craft      = Craft.getArticles();
-let homepage   = Homepage.getArticles();
+// let homepage   = Homepage.getArticles();
 let pieces     = Pieces.getArticles();
 let technical  = Technical.getArticles();
 let thoughts   = Thoughts.getArticles();
@@ -30,14 +30,14 @@ function generateArticleIds(arts, startIndex, reverse) {
          arts[i].id = i + startIndex;
    }
 }
-generateArticleIds(homepage, 0, false);
+// generateArticleIds(homepage, 0, false);
 generateArticleIds(craft, 10000, true);
 generateArticleIds(pieces, 20000, true);
 generateArticleIds(technical, 30000, true);
 generateArticleIds(thoughts, 40000, true);
 
 let allArticles = [];
-allArticles.push(...homepage );
+// allArticles.push(...homepage );
 allArticles.push(...craft    );
 allArticles.push(...pieces   );
 allArticles.push(...technical);
@@ -66,13 +66,14 @@ fs.writeFile(
 );
 
 // Json titles-per-category
-function writeTitles(categoryString, array) {
+function writeTitles(categoryString, array, logfn) {
    let titles = [];
    for (let i = 0; i < array.length; ++i) {
       titles.push({
          'id': array[i].id,
          'title': array[i].title,
-         'date': array[i].date
+         'date': array[i].date,
+         'thumb': array[i].thumb,
       });   
    }
    fs.writeFile(
@@ -82,10 +83,10 @@ function writeTitles(categoryString, array) {
    );
 }
 writeTitles('craft', craft    , logfn);
-writeTitles('homepage', homepage , logfn);
-writeTitles('pieces', pieces   , logfn);
+// writeTitles('homepage', homepage , logfn);
+// writeTitles('thoughts', pieces   , logfn);
 writeTitles('technical', technical, logfn);
-writeTitles('thoughts', thoughts , logfn);
+writeTitles('thoughts', pieces.concat(thoughts), logfn);
 
 // Json per-article
 for (let i = 0; i < allArticles.length; ++i) {

@@ -4,22 +4,13 @@ export class Technical {
 
   static getArticles() {
     const articles = [
-      // {
-      //   title: 'Useful links',
-      //   author: 'm.s',
-      //   date: '2017/01/10',
-      //   body: [
-      //     {type: ParagraphType.ListItemFR, content: 'Références'},
-      //     {type: ParagraphType.Link, content: 'http://google.com', heading: 'Google'}
-      //   ],
-      //   validated: true
-      // },
       {
         // id: -2,
         title: 'Thesis: Topology, Lost Chapters',
-        author: 'm.s',
+        author: 'M. S',
         type: 'welcome',
         date: '2019/09/15',
+        thumb: 'assets/img/technical/crc.jpg',
         body: [
           {type: ParagraphType.Title, content: 'Introduction'},
           {type: ParagraphType.Paragraph, content:
@@ -102,11 +93,12 @@ export class Technical {
       {
         // id: -2,
         title: '2D vector fields with CPU particle tracing',
-        author: 'm.s',
+        author: 'M. S',
         type: 'welcome',
         date: '2019/02/05',
+        thumb: 'assets/img/technical/particles12.jpg',
         body: [
-          {type: ParagraphType.Image, content: 'assets/img/2.jpg'},
+          {type: ParagraphType.Image, content: 'assets/img/technical/2.jpg'},
           {type: ParagraphType.Title, content: 'Introduction'},
           {type: ParagraphType.Paragraph, content:
               'This short article introduces the concept of <i>vector field</i>, ' +
@@ -319,8 +311,9 @@ export class Technical {
 
       {
         title: 'Spearman’s correlation formula',
-        author: 'm.s',
+        author: 'M. S',
         date: '2019/01/10',
+        thumb: 'assets/img/craft/lance.jpg',
         body: [
           {type: ParagraphType.Title, content: 'I. Context'},
           {type: ParagraphType.Paragraph, content:

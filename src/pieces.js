@@ -6,7 +6,8 @@ export class Pieces {
     const articles = [
       { title: 'Simon Stalenhag’s flooded paintings',
         date: '2019/02/24',
-        author: 'slw',
+        author: 'M. S',
+        thumb: 'assets/img/pieces/stalenhag/1.jpg',
         body: [
           {type: ParagraphType.Title, content: 'The artist'},
           {type: ParagraphType.Paragraph, content:
@@ -57,7 +58,8 @@ export class Pieces {
       },
       { title: 'Twisted nightmares from Anatoly Fomenko',
         date: '2019/01/24',
-        author: 'slw',
+        author: 'M. S',
+        thumb: 'assets/img/pieces/fomenko/color/10.jpg',
         body: [
           {type: ParagraphType.Title, content: 'The artist'},
           {type: ParagraphType.Paragraph, content:
@@ -136,7 +138,7 @@ export class Pieces {
     ];
 
     for (let a = 0; a < articles.length; ++a) {
-      articles[a]['type'] = 'pieces';
+      articles[a]['type'] = 'thoughts';
     }
 
     return articles;
