@@ -24,7 +24,7 @@ export class Technical {
           },
           {type: ParagraphType.Title, content: 'I. Inscribed rectangle problem'},
           {type: ParagraphType.Paragraph, content:
-              '<i>(Inscribed rectangle problem)</i> Given any non-self-intersecting continuous loop <small>$S$</small> in the Euclidean plane, can one always find a rectangle whose vertices are on <small>$S$</small>?'
+              '(<b>Inscribed rectangle problem</b>) Given any non-self-intersecting continuous loop <small>$S$</small> in the Euclidean plane, can one always find a rectangle whose vertices are on <small>$S$</small>?'
           },
           {type: ParagraphType.Paragraph, content:
               'In other words, the problem is to find whether there are two distinct pairs of points, <small>$\\{x_1,y_1\\} \\in S^2$</small>, and <small>$\\{x_2,y_2\\} \\in S^2$</small>, which form two segments of equal length and sharing a midpoint (Fig. 1, left). A quite simple solution to this problem, involving topology, is given in [<i>Balancing acts</i>, M. Meyerson, 1981; <i>Rectangles and simple closed curves</i>, H. Vaughan, 1977]. Let us denote <small>$M$</small> the set of (unordered) pairs of points in the closed curve <small>$S$</small>: <small>$M=\\{ \\{x,y\\}, (x,y)\\in S^2\\}$</small> and furthermore <small>$M$</small> can be understood as a two-dimensional surface: every element <small>$\\{x,y\\}$</small> of <small>$M$</small> can be plotted, for example, on a square part of the plane, with its abscissa corresponding to the choice of <small>$x$</small> and its ordinate corresponding to the choice of <small>$y$</small>. Here pairs are unordered, so <small>$\\{x,y\\}=\\{y,x\\}$</small>. By identifying the symmetric points <small>$\\{x,y\\}$</small> with <small>$\\{y,x\\}$</small>, and by properly identifying extremal segments of the square (because <small>$S$</small> is a loop), <small>$M$</small> can be shown to have the same topological structure as a Möbius strip (Fig. 1, right). '
@@ -52,7 +52,7 @@ export class Technical {
               'The interest of topology, though, is not limited to proving the existence or non-existence of solutions to abstract, theoretical problems. A recently developed field of topology involving <i>continuous functions</i>, called <i>Morse theory</i> [<i>Morse theory indomitable</i>, R. Bott, 1988], popularized by Milnor [<i>Morse Theory</i>, Milnor, 1963] and which found many applications in computing [<i>Computational Topology</i>, H. Edelsbrunner and J. Harer, 2009] and proved very useful to the understanding of large data. Let us see, in another example, how topology relates not only to the mere concept of space, but also to <i>functions</i> defined on them (with sufficiently nice smoothness properties). '
           },
           {type: ParagraphType.Paragraph, content:
-              '<i>(Necklace splitting problem)</i> A necklace has <small>$2n$</small> beads of two different colors, arranged in some order. What is the smallest number of cuts necessary to split the necklace evenly, so that beads of each color can be equally shared between two partners? '
+              '(<b>Necklace splitting problem</b>) A necklace has <small>$2n$</small> beads of two different colors, arranged in some order. What is the smallest number of cuts necessary to split the necklace evenly, so that beads of each color can be equally shared between two partners? '
           },
 
           {type: ParagraphType.Paragraph, content:
@@ -75,7 +75,7 @@ export class Technical {
           },
 
           {type: ParagraphType.Paragraph, content:
-              '<b>Theorem</b> <i>(Borsuk-Ulam)</i>: For every continuous function <small>$f: S^2 \\to \\mathbb{R}^2$</small>, there exists a point <small>$(x,y,z)\\in S^2$</small> such that <small>$f(x,y,z) = f(-x,-y,-z)$</small>.'
+              '<b>Theorem</b> (<b>Borsuk-Ulam</b>): For every continuous function <small>$f: S^2 \\to \\mathbb{R}^2$</small>, there exists a point <small>$(x,y,z)\\in S^2$</small> such that <small>$f(x,y,z) = f(-x,-y,-z)$</small>.'
           },
 
           {type: ParagraphType.Paragraph, content:
@@ -294,11 +294,11 @@ export class Technical {
           {type: ParagraphType.Title, content: 'VI. Canvas: the decay hack'},
           {type: ParagraphType.Paragraph, content:
               'The art of graphics carries a long tradition of clever hacks. ' +
-              'The following one is quite simple and may not deserve to be called a “hack”, but ' +
+              'The following one is quite simple and may not deserve to be called a “hack,” but ' +
               'is still quite interesting. ' +
               'HTML’s Canvas ships functions that allow to draw lines: ' +
-              '“moveTo”, which sort of moves the virtual pencil Canvas draws with, ' +
-              'and “lineTo”, which effectively draws the line from the previous pencil location. ' +
+              '“moveTo,” which sort of moves the virtual pencil Canvas draws with, ' +
+              'and “lineTo,” which effectively draws the line from the previous pencil location. ' +
               'When all the lines in a frame have been drawn, and the frame has been rendered, ' +
               'there is no function to get back whatever was drawn then, so no way to quickly apply ' +
               'opacity on lines that would be “ready and waiting,” so to speak. ' +

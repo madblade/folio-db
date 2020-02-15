@@ -40,7 +40,7 @@ export class Pieces {
           {type: ParagraphType.Image, content: 'assets/img/pieces/stalenhag/2.jpg'},
           {type: ParagraphType.Image, content: 'assets/img/pieces/stalenhag/3.jpg'},
           {type: ParagraphType.Image, content: 'assets/img/pieces/stalenhag/4.jpg'},
-          {type: ParagraphType.Title, content: ' "The Flood" '},
+          {type: ParagraphType.Title, content: ' “The Flood” '},
           {type: ParagraphType.Image, content: 'assets/img/pieces/stalenhag/flood/1.jpg'},
           {type: ParagraphType.Image, content: 'assets/img/pieces/stalenhag/flood/2.jpg'},
           {type: ParagraphType.Image, content: 'assets/img/pieces/stalenhag/flood/3.jpg'},

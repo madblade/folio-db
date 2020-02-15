@@ -40,7 +40,7 @@ const a2 =
     },
     
     {type: ParagraphType.Title, content: 'V. Post scriptum' },
-    {type: ParagraphType.Paragraph, content: 'Reading [Dennett], I found it delightful to think that "Quining" in "Quining Qualia" could have meant that there be a parallel between programming quines and qualia. ' },
+    {type: ParagraphType.Paragraph, content: 'Reading [Dennett], I found it delightful to think that “Quining” in “Quining Qualia” could have meant that there be a parallel between programming quines and qualia. ' },
     {type: ParagraphType.Paragraph, content: 'There are some aspects that were not mentioned in this article, but that would deserve a further elaboration, among which cultural aspects (do you think you would convince yourself you have a consciousness because other people keep talking about it?), or the relationship between the multiplicity of qualia and time. ' },
 
     {type: ParagraphType.Title, content: 'VI. Post post scriptum' },
