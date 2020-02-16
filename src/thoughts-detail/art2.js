@@ -31,7 +31,7 @@ const a2 =
     
     {type: ParagraphType.Title, content: 'IV. The universe and itself' },
     {type: ParagraphType.Paragraph, content: 'Building up from the concept of qualia as a phenomenon arising from self-awareness, it is tempting to draw an analogy to a larger problem. Let’s get back to the example of the room filled with philosophers. ' },
-    {type: ParagraphType.Paragraph, content: 'I proposed that an external observer would have no need to consider qualia. But this observer is part of a larger system. As such, it can be subject to the phenomenon of qualia itself. So talking about the universe at large always depends on some point of view which is part of the said universe, be it the point of view of a community, or a subset of the universe. ' },
+    {type: ParagraphType.Paragraph, content: 'I proposed that an external observer would have no need to consider qualia. But this observer is part of a larger system. As such, it can be subject to the phenomenon of qualia itself. So talking about the universe at large always depends on some point of view which is part of said universe, be it the point of view of a community, or a subset of the universe. ' },
     {type: ParagraphType.Paragraph, content: ' “Conscious” life, notably with the emergence of a philosophical community, is, to some extent, a way for the universe to inquiry about itself. Metaphysics is a protrusion of the quale of philosophy. ' },
     {type: ParagraphType.Quotation, content:
         'We have no need of other worlds. We need mirrors. ',
