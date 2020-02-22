@@ -5,6 +5,30 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
+        title: 'Image reconstruction with primitives',
+        date: '2020/02/23',
+        author: 'M. S',
+        thumb: 'assets/img/craft/joconde.jpg',
+        body: [
+           {type: ParagraphType.Image,
+            content: 'assets/img/craft/joconde.jpg'
+          },
+          {type: ParagraphType.Title, content: 'Try it!' }, 
+            {type: ParagraphType.Paragraph, content:
+            'This is an interactive WebGL-powered demo, based on the wonderful idea by <a href="https://github.com/fogleman/primitive/">@fogleman</a>, that reconstructs images from simple (primitive) shapes. Don’t forget to check out the <a href="https://primitive.lol/">original application</a> for macOS!'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://madblade.github.io/geotransform/">Demo (do NOT attempt on mobile!)</a>'
+          },
+          {type: ParagraphType.Paragraph, content:
+              'Test it with different parameters (and with different images!) for interesting artistic effecs!'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://github.com/madblade/geotransform/">Source code</a>'
+          }
+        ]
+      },
+      {
         title: 'Persistent homology on an example',
         date: '2019/09/16',
         author: 'M. S',
