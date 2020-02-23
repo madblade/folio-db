@@ -75,7 +75,7 @@ export class Technical {
           },
 
           {type: ParagraphType.Paragraph, content:
-              '<b>Theorem</b> (<b>Borsuk-Ulam</b>): For every continuous function <small>$f: S^2 \\to \\mathbb{R}^2$</small>, there exists a point <small>$(x,y,z)\\in S^2$</small> such that <small>$f(x,y,z) = f(-x,-y,-z)$</small>.'
+              '<b>Theorem</b> (<b>Borsuk-Ulam</b>): For every continuous function <small>$f: S_2 \\to \\mathbb{R}^2$</small>, there exists a point <small>$(x,y,z)\\in S_2$</small> such that <small>$f(x,y,z) = f(-x,-y,-z)$</small>.'
           },
 
           {type: ParagraphType.Paragraph, content:
