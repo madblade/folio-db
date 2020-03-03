@@ -5,6 +5,27 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
+        title: 'Real-time Wormhole effect',
+        date: '2020/03/03',
+        author: 'M. S',
+        thumb: 'assets/img/craft/wormhole.jpg',
+        body: [
+           {type: ParagraphType.Image,
+            content: 'assets/img/craft/wormhole.jpg'
+          },
+          {type: ParagraphType.Title, content: 'Try it!' }, 
+            {type: ParagraphType.Paragraph, content:
+            'Interactive, (non-physical) real-time WebGL wormhole, inspired from <a href="https://github.com/sirxemic/Interstellar/">@sirxemic</a>. The achieved effect is designed entirely ad-hoc, based on a simple stretch shader and on a cubecam / envmap. '
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://madblade.github.io/wormhole/">Demo</a>'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://github.com/madblade/wormhole/">Source code</a>'
+          }
+        ]
+      },
+      {
         title: 'Image reconstruction with primitives',
         date: '2020/02/23',
         author: 'M. S',
