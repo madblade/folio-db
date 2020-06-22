@@ -53,10 +53,8 @@ export class Craft {
         title: 'First-person mobile controls for Three.js',
         date: '2020/04/25',
         author: 'M. S',
+        thumb: 'assets/img/craft/widget-default.jpg',
         body: [
-           {type: ParagraphType.Image,
-            content: 'assets/img/craft/widget-default.jpg'
-          },
           {type: ParagraphType.Title, content: 'Try it!' }, 
           {type: ParagraphType.Paragraph, content:
             'Navigating a 3D scene on touch devices is challenging—pinch and drag movements are intuitive, but they require a fixed camera. These new controls provide a gamepad-inspired approach to camera movement! '
