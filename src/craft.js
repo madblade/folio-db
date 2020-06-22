@@ -10,6 +10,12 @@ export class Craft {
         author: 'M. S',
         thumb: 'assets/img/craft/gerstner-2.jpg',
         body: [
+           {type: ParagraphType.Image,
+            content: 'assets/img/craft/gerstner-1.jpg'
+          },
+           {type: ParagraphType.Image,
+            content: 'assets/img/craft/gerstner-2.jpg'
+          },
           {type: ParagraphType.Title, content: 'Try it!' }, 
           {type: ParagraphType.Paragraph, content:
             'Waves and ocean rendering in WebGL is quite popular (see this famous <a href="https://www.shadertoy.com/view/Ms2SD1">shadertoy example</a> using procedural noise and this reference <a href="https://threejs.org/examples/webgl_shaders_ocean2.html">threejs example</a> using FFTs). These examples are impressive but they rely entirely on fragment processing. The Gerstner approach documented in <a href="https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models">GPU Gems 1</a> is geometry-oriented; it is more suitable in a number of scenarios, as it puts less strain on the GPU and is more model-friendly (e.g. to synchronize ship position and pitch-roll-yaw). '
@@ -28,6 +34,9 @@ export class Craft {
         author: 'M. S',
         thumb: 'assets/img/craft/shadow-volume.jpg',
         body: [
+           {type: ParagraphType.Image,
+            content: 'assets/img/craft/shadow-volume.jpg'
+          },
           {type: ParagraphType.Title, content: 'Try it!' }, 
           {type: ParagraphType.Paragraph, content:
             '“Shadow volume” is a 3D graphics technique to compute crisp, high-fidelity shadows. An important bottleneck to the technique is the high CPU load necessary to extract the shadow geometry. When the shadow caster is sufficiently smooth, however, this geometry extraction becomes trivial—and the shadowing artifacts are kept to a minimum. Here is an illustration with some smooth meshes (and a skinned character)! '
@@ -46,6 +55,9 @@ export class Craft {
         author: 'M. S',
         thumb: 'assets/img/craft/widget-default.jpg',
         body: [
+           {type: ParagraphType.Image,
+            content: 'assets/img/craft/widget-default.jpg'
+          },
           {type: ParagraphType.Title, content: 'Try it!' }, 
           {type: ParagraphType.Paragraph, content:
             'Navigating a 3D scene on touch devices is challenging—pinch and drag movements are intuitive, but they require a fixed camera. These new controls provide a gamepad-inspired approach to camera movement! '
@@ -57,11 +69,9 @@ export class Craft {
               '<a href="https://github.com/madblade/widget-mobile-controller/">Source code</a>'
           },
           {type: ParagraphType.Title, content: 'Themes' },
-          {type: ParagraphType.Image,
-            content: 'assets/img/craft/widget-playstation.jpg'
-          },
-          {type: ParagraphType.Image,
-            content: 'assets/img/craft/widget-xbox.jpg'
+          {type: ParagraphType.TwoImages,
+            image1: 'assets/img/craft/widget-playstation.jpg',
+            image2: 'assets/img/craft/widget-xbox.jpg'
           }
         ]
       },
