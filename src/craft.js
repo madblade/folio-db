@@ -53,7 +53,6 @@ export class Craft {
         title: 'First-person mobile controls for Three.js',
         date: '2020/04/25',
         author: 'M. S',
-        thumb: 'assets/img/craft/widget-default.jpg',
         body: [
            {type: ParagraphType.Image,
             content: 'assets/img/craft/widget-default.jpg'
