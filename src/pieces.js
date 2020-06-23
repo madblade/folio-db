@@ -11,13 +11,13 @@ export class Pieces {
         body: [
           {type: ParagraphType.Title, content: 'The artist'},
           {type: ParagraphType.Paragraph, content:
-              'Fragments of the universe imagined by swedish artist ' +
+              'Fragments of the universe imagined by Swedish artist ' +
               '<a href="http://www.simonstalenhag.se/">Simon Stalenhag</a> ' +
               'have attracted praise and interest from around the world. ' +
               'Following his recognition, he was able to publish narrative art books and ' +
               'successfully kickstart a ' +
               '<a href="https://en.wikipedia.org/wiki/Tales_from_the_Loop_(role-playing_game)">table-top game</a>, ' +
-              'developping further his world and giving it backstories. '
+              'developing further his world and giving it backstories. '
           },
           {type: ParagraphType.Paragraph, content:
               'Regardless of the praise and upcoming adaptations, ' +

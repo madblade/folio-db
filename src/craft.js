@@ -5,7 +5,7 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
-        title: 'Web for lightspeed prototyping: Minecraft with Portals',
+        title: 'WebGL for light-speed prototyping: Minecraft with Portals',
         date: '2020/06/20',
         author: 'M. S',
         thumb: 'assets/img/craft/spix-portals.jpg',
@@ -18,7 +18,7 @@ export class Craft {
             'Once I thought I’d grow tired of Minecraft because of cosmetic updates (more blocks, more effects, more mobs, more <i>things</i> and not more things <i>to do</i>), but this was before the Combat Update. Regardless of whether the reader agrees or not with the design choices of this update, it was assuming a direction, restricting the range of possibilities rather than opening it. This somehow made me nostalgic of the Redstone Update, which provided players with something they needed—but they didn’t know they needed. '
           },
           {type: ParagraphType.Paragraph, content:
-            'This small WebGL-powered project shows that it is quite easy (even for a single person) to prototype simple ideas (even for a multi-player sandbox game), like portals, generic gravity, graphical effects; and to experiment, to grow as a person interested in graphics and game development, while keeping the possibilities open. The nature and liveliness of the JavaScript ecosystem make it <i>really</i> fast to get a basic idea working—less than 2s from the moment you hit Ctrl+S to your browser realoading with the project running up-to-date; out-of-the-box debuggers and profiling tools, and so on. This greatly reduces the time spent on debugging or investigating low-level techincal details unrelevant to prototyping, and instead emphasizes on the ever-present, ever-lasting challenge in graphics: performance. '
+            'This small WebGL-powered project shows that it is quite easy (even for a single person) to prototype simple ideas (even for a multi-player sandbox game), like portals, generic gravity, graphical effects; and to experiment, to grow as a person interested in graphics and game development, while keeping the possibilities open. The nature and liveliness of the JavaScript ecosystem make it <i>really</i> fast to get a basic idea working—less than 2s from the moment you hit Ctrl+S to your browser reloading with the project running up-to-date; out-of-the-box debuggers and profiling tools, and so on. This greatly reduces the time spent on debugging or investigating low-level technical details irrelevant to prototyping, and instead emphasizes on the ever-present, ever-lasting challenge in graphics: performance. '
           },
           {type: ParagraphType.Title, content: 'Demo (Chrome advised!)' },
           {type: ParagraphType.Paragraph, content:
@@ -29,22 +29,22 @@ export class Craft {
           },
           {type: ParagraphType.Title, content: 'Some technical challenges' }, 
           {type: ParagraphType.Paragraph, content:
-            '<b>Texture bleeding</b>: using atlasing with texture filtering (linear mipmaps or anisotropic filtering) will produce bleeding artifacts on the edge of block tiles, because linear filters query neighbour tiles. Not entering into technical details, anisotropic filtering is performed by a WebGL extension called <i>EXT_texture_filter_anisotropic</i>, for which (sic.) “(…) implementations are permitted to ignore the minification or magnification filter and implement the highest quality of anisotropic filtering possible,” which means that most of the time, the minification filter is LINEAR_MIPMAP_LINEAR (where we want NEAREST). Without much control on how anisotropic filtering combines mipmaps in WebGL, there is little choice but to disable anisotropic filtering and only use nearest filters. That produces (ugly) grain at oblique viewing angles. '
+            '<b>Texture bleeding</b>: using atlasing with texture filtering (linear mipmaps or anisotropic filtering) will produce bleeding artifacts on the edge of block tiles, because linear filters query neighbor tiles. Not entering into technical details, anisotropic filtering is performed by a WebGL extension called <i>EXT_texture_filter_anisotropic</i>, for which (sic.) “(…) implementations are permitted to ignore the minification or magnification filter and implement the highest quality of anisotropic filtering possible,” which means that most of the time, the minification filter is LINEAR_MIPMAP_LINEAR (where we want NEAREST). Without much control on how anisotropic filtering combines mipmaps in WebGL, there is little choice but to disable anisotropic filtering and only use nearest filters. That produces (ugly) grain at oblique viewing angles. '
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Portals</b>: performance and flexibility. Using <i>render target textures</i> is a flexible solution for rendering nested portals (and allows one to further apply distortion effects if they so desire), at the cost of performance. The other well-documented technique, that uses <i>stencil masks</i>, offers performance at the cost of being somewhat less flexible and more programatically involved. Here I combine both: first, rendering a scene that contains only the portal frame to the stencil buffer, then rendering the “otherworldly” scene into an RTT using the stencil buffer to restrict the screen space needing rasterization. There is a neat performance gain over only using RTTs! In Threejs, however, this comes with a drawback: there is no default anti-aliasing for rendering to textures, hence the need for an additional software FXAA pass. '
+            '<b>Portals</b>: performance and flexibility. Using <i>render target textures</i> is a flexible solution for rendering nested portals (and allows one to further apply distortion effects if they so desire), at the cost of performance. The other well-documented technique, that uses <i>stencil masks</i>, offers performance at the cost of being somewhat less flexible and more programmatically involved. Here I combine both: first, rendering a scene that contains only the portal frame to the stencil buffer, then rendering the “otherworldly” scene into an RTT using the stencil buffer to restrict the screen space needing rasterization. There is a neat performance gain over only using RTTs! In Threejs, however, this comes with a drawback: there is no default anti-aliasing for rendering to textures, hence the need for an additional software FXAA pass. '
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Performance issues, I</b>: with WebGL, performance is a major bottleneck. When a task cannot be completed in less than 7ms (for 144Hz displays), is must be made progressive (which means, it must pause when its time budget has been exhausted, only to resume at the next game loop iteration). Having algorithms work in a streaming manner (as well as caching) is necessary for the terrain generation part, as well as for topological algorithms that run there. '
+            '<b>Performance issues, I</b>: with WebGL, performance is a major bottleneck. When a task cannot be completed in less than 7ms (for 144Hz displays), it must be made progressive (which means, it must pause when its time budget has been exhausted, only to resume at the next game loop iteration). Having algorithms work in a streaming manner (as well as caching) is necessary for the terrain generation part, as well as for topological algorithms that run there. '
           },
           {type: ParagraphType.Paragraph, content:
             '<b>Performance issues, II</b>: the clock provided by the JavaScript function <i>performance.now()</i> was accurate to 5µs, before Spectre and Meltdown. Since then, for security reasons, the resolution of timers has been decreased, and the support for SharedArrayBuffer has been dropped by many browsers, greatly limiting the advantages WebWorkers could have. '
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Performance issues, III</b>: because of the genericity of Threejs, is is necessary to use instancing for materials when rendering a scene from multiple cameras in a single frame (that’s the case for portals and water reflection). Without instancing materials and swapping between them after each render call, Threejs automatically rebuilds them (because he thinks the lighting has changed), greatly increasing the CPU load and inducing a performance drop, which is most noticeable in Firefox. The cause of this performance drop would have been difficult to determine without browser profiling tools. '
+            '<b>Performance issues, III</b>: because of the generality of Threejs, it is necessary to use instancing for materials when rendering a scene from multiple cameras in a single frame (that’s the case for portals and water reflection). Without instancing materials and swapping between them after each render call, Threejs automatically rebuilds them (because he thinks the lighting has changed), greatly increasing the CPU load and inducing a performance drop, which is most noticeable in Firefox. The cause of this performance drop would have been difficult to determine without browser profiling tools. '
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Performance issues, IV</b>: before getting started on a multiplayer-oriented project, it’s important to have a clear idea of what kind of game model is suitable for that case. The network bandwidth is a major bottleneck that makes it key to carefully desing the whole project’s architecture. Here I’m using a lockstep model (only transmitting client inputs and world updates), but becase of the SocketIO/TCP overhead, I found client interpolation was necessary. Another advantage of doing everything in JavaScript (NodeJS + client ES6) is that I can easily bundle the server and the client together—and launch the game locally in the browser. This is what’s done in the demo, where the default game settings has the client running as fast as the display can handle (60 to 144fps), and the server is sending entity updates at 20fps. '
+            '<b>Performance issues, IV</b>: before getting started on a multiplayer-oriented project, it’s important to have a clear idea of what kind of game model is suitable for that case. The network bandwidth is a major bottleneck that makes it key to carefully design the whole project’s architecture. Here I’m using a lockstep model (only transmitting client inputs and world updates), but because of the SocketIO/TCP overhead, I found client interpolation was necessary. Another advantage of doing everything in JavaScript (NodeJS + client ES6) is that I can easily bundle the server and the client together—and launch the game locally in the browser. This is what’s done in the demo, where the default game settings has the client running as fast as the display can handle (60 to 144fps), and the server is sending entity updates at 20fps. '
           },
           {type: ParagraphType.Paragraph, content:
             'This project came with many other challenges (e.g. physics, shadows, skies…) I’d be happy to talk about in a next article! '
@@ -96,7 +96,7 @@ export class Craft {
         ]
       },
       {
-        title: 'Apporximate Shadow Volume for smooth geometry',
+        title: 'Approximate Shadow Volume for smooth geometry',
         date: '2020/05/05',
         author: 'M. S',
         thumb: 'assets/img/craft/shadow-volume.jpg',
@@ -195,7 +195,7 @@ export class Craft {
           },
           {type: ParagraphType.Title, content: 'Try it!' }, 
             {type: ParagraphType.Paragraph, content:
-            'This short javascript demo presents the basic concepts of 1D and 2D persistent homology on a simple example.'
+            'This short JavaScript demo presents the basic concepts of 1D and 2D persistent homology on a simple example.'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/persistence/">Demo</a>'

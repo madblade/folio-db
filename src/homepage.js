@@ -27,7 +27,7 @@ export class Homepage {
               'for 5 years (machine learning, meshing, CFD, and topology); ' +
               'graphics and game design experimenter for ' +
               '3 years on my free time (small side projects in ' +
-              'javascript, upcoming release). ' +
+              'JavaScript). ' +
               ''
           },
           {type: ParagraphType.Paragraph, content:
@@ -55,32 +55,6 @@ export class Homepage {
         //      'visual javascript demos, random thoughts ' +
         //      'and other things hardly worthy of interest. '
         //  },
-        ]
-      },
-
-      {
-        // id: -1,
-        title: 'Coming soon!',
-        author: 'm.s',
-        type: 'welcome',
-        date: '2019/02/05',
-        body: [
-          {type: ParagraphType.Title, content: 'Short-term'},
-          {type: ParagraphType.Paragraph, content:
-              'New articles should be there pretty soon, ' +
-              'at least one in every section.'
-          },
-          {type: ParagraphType.Title, content: 'Mid-term'},
-          {type: ParagraphType.Paragraph, content:
-              'If the consequent workload the author is currently undergoing ' +
-              'calms down for a bit, there should be news concerning ' +
-              'the project-which-must-not-be-named ' +
-              'in a not-so-far future.'
-          },
-          {type: ParagraphType.Title, content: 'Long-term'},
-          {type: ParagraphType.Paragraph, content:
-              'Something art-related. Stay tuned!'
-          },
         ]
       }
     ];
