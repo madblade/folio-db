@@ -5,6 +5,34 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
+        title: 'WebGL painterly rendering',
+        date: '2021/01/06',
+        author: 'M. S',
+        thumb: 'assets/img/craft/painterly-1.jpg',
+        body: [
+          {type: ParagraphType.Image,
+            content: 'assets/img/craft/painterly-1.jpg'
+          },
+          {type: ParagraphType.Image,
+            content: 'assets/img/craft/painterly-2.jpg'
+          },
+          {type: ParagraphType.Title, content: 'About' }, 
+          {type: ParagraphType.Paragraph, content:
+            'In her seminal Disney paper, <i>“Painterly Rendering for Animation”</i> (SIGGRAPH ’96), Barbara Meier presents a ground-breaking idea: why not use particles, instead of triangles, to render brush strokes? Since then, many similar approaches have been proposed for artistic, non-photorealistic rendering (NPR), trying to tackle the (challenging) problem of placing and orienting those particle-brushes while keeping temporal coherence. '
+          },
+          {type: ParagraphType.Paragraph, content:
+            'In this little demo, I use (mostly temporally coherent) information from the depth buffer and object UV coordinates to compute particle sizes, colors and orientations. It runs interactively in the browser even for 100k particles! '
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://madblade.github.io/brush-renderer/">Demo</a>'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://github.com/madblade/brush-renderer/">Source code</a>'
+          }
+        ]
+      },
+    
+      {
         title: 'WebGL for light-speed prototyping: Minecraft with Portals',
         date: '2020/06/20',
         author: 'M. S',
