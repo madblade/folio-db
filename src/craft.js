@@ -5,6 +5,27 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
+        title: 'Inverse Kinematics algorithms — WebGL',
+        date: '2021/01/16',
+        author: 'M. S',
+        thumb: 'assets/img/craft/ik.jpg',
+        body: [
+          {type: ParagraphType.Image,
+            content: 'assets/img/craft/ik.jpg'
+          },
+          {type: ParagraphType.Title, content: 'About' }, 
+          {type: ParagraphType.Paragraph, content:
+            'A short take on common IK algorithms. '
+          },
+          {type: ParagraphType.Paragraph, content:
+              'Read the <a href="https://madblade.github.io/inverse-kinematics-arm/">full article here</a>!'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://github.com/madblade/inverse-kinematics-arm/">Source code</a>'
+          }
+        ]
+      },
+      {
         title: 'WebGL painterly rendering',
         date: '2021/01/06',
         author: 'M. S',
