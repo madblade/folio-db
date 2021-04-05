@@ -5,6 +5,27 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
+        title: 'Blender-like flow editor for Neural Networks',
+        date: '2021/04/05',
+        author: 'M. S',
+        thumb: 'assets/img/craft/vis-nn.jpg',
+        body: [
+          {type: ParagraphType.Image,
+            content: 'assets/img/craft/vis-nn.jpg'
+          },
+          {type: ParagraphType.Title, content: 'About' }, 
+          {type: ParagraphType.Paragraph, content:
+            'This is a small flow editor to build neural network architectures visually. It is inspired by the Ennui visual editor, using the Rete flow framework. With the arrival of tensorflow for JavaScript which supports WebGL-based processing (and soon WebGPU), the performance barrier preventing doing machine learning directly in Web browsers won’t be as high! This seems to be a promising perspective. '
+          },
+          {type: ParagraphType.Paragraph, content:
+              'See the <a href="https://madblade.github.io/vis-nn/">demo here</a>!'
+          },
+          {type: ParagraphType.Paragraph, content:
+              '<a href="https://github.com/madblade/vis-nn/">Source code</a>.'
+          }
+        ]
+      },
+      {
         title: 'Inverse Kinematics algorithms — WebGL',
         date: '2021/01/16',
         author: 'M. S',
