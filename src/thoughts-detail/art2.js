@@ -1,4 +1,4 @@
-import {ParagraphType} from '../article';
+import {ParagraphType} from '../article.js';
 export class A2 { static get() {
 const a2 = 
 { title: 'Quailing qualia',

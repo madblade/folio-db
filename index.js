@@ -1,12 +1,12 @@
-var fs = require('fs');
+import * as fs from 'fs';
 
-import { Craft } from './src/craft';
+import { Craft } from './src/craft.js';
 // import { Homepage } from './src/homepage';
-import { Pieces } from './src/pieces';
-import { Technical } from './src/technical';
-import { Thoughts } from './src/thoughts';
+import { Pieces } from './src/pieces.js';
+import { Technical } from './src/technical.js';
+import { Thoughts } from './src/thoughts.js';
 
-import { Categories } from './src/categories';
+import { Categories } from './src/categories.js';
 
 // Parse articles and form JSONs.
 

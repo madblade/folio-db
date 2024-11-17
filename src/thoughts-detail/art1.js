@@ -1,4 +1,4 @@
-import {ParagraphType} from '../article';
+import {ParagraphType} from '../article.js';
 export class A1 { static get() {
 const a1 = 
 { title: 'What does it take to do science?',

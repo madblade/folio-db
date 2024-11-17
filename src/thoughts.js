@@ -1,7 +1,7 @@
-import {ParagraphType} from './article';
-import {A0} from './thoughts-detail/art0';
-import {A1} from './thoughts-detail/art1';
-import {A2} from './thoughts-detail/art2';
+import {ParagraphType} from './article.js';
+import {A0} from './thoughts-detail/art0.js';
+import {A1} from './thoughts-detail/art1.js';
+import {A2} from './thoughts-detail/art2.js';
 
 export class Thoughts {
 

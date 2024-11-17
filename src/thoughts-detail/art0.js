@@ -1,4 +1,4 @@
-import {ParagraphType} from '../article';
+import {ParagraphType} from '../article.js';
 export class A0 { static get() {
 const a1 = 
 { title: 'Values are everywhere',

@@ -1,4 +1,4 @@
-import {ParagraphType} from './article';
+import {ParagraphType} from './article.js';
 
 export class Technical {
 
@@ -569,70 +569,70 @@ export class Technical {
         validated: true
       },
 
-      // { title: 'JavaScript Quines',
-      //   date: 'draft',
-      //   body: [
-      //     {type: ParagraphType.Title, content: 'Introduction' },
-      //     {type: ParagraphType.Paragraph, content: 'Quines: definition' },
-      //     {type: ParagraphType.Paragraph, content: 'Problematic' },
-      //     {type: ParagraphType.Title, content: 'I. Readable quines' },
-      //     {type: ParagraphType.Code, language: 'javascript',
-      //         content:
-      //           '(function quine(){\n' +
-      //           '  console.log(\'(\' + quine.toString() + \')();\');\n' +
-      //           '})();'
-      //       },
-      //     {type: ParagraphType.Code, language: 'javascript',
-      //         content:
-      //           '!function $(){console.log(\'!\'+$+\'()\')}()\n'
-      //     },
-      //     {type: ParagraphType.Paragraph, content: 'Discussion' },
-      //     {type: ParagraphType.Title, content: 'II. Golfed quines' },
-      //     {type: ParagraphType.Code, language: 'javascript',
-      //       content:
-      //         '$=_=>`$=${$};$()`;$()'
-      //     },
-      //     {type: ParagraphType.Paragraph, content: 'Discussion' },
-      //     {type: ParagraphType.Code, language: 'javascript',
-      //       content:
-      //         '(_=$=>`(_=${_})()`)()'
-      //     },
-      //     {type: ParagraphType.Paragraph, content: 'Discussion' },
-      //    ]
-      //  },
+      { title: 'JavaScript Quines',
+         date: 'draft',
+         body: [
+           {type: ParagraphType.Title, content: 'Introduction' },
+           {type: ParagraphType.Paragraph, content: 'Quines: definition' },
+           {type: ParagraphType.Paragraph, content: 'Problematic' },
+           {type: ParagraphType.Title, content: 'I. Readable quines' },
+           {type: ParagraphType.Code, language: 'javascript',
+               content:
+                 '(function quine(){\n' +
+                 '  console.log(\'(\' + quine.toString() + \')();\');\n' +
+                 '})();'
+             },
+           {type: ParagraphType.Code, language: 'javascript',
+               content:
+                 '!function $(){console.log(\'!\'+$+\'()\')}()\n'
+           },
+           {type: ParagraphType.Paragraph, content: 'Discussion' },
+           {type: ParagraphType.Title, content: 'II. Golfed quines' },
+           {type: ParagraphType.Code, language: 'javascript',
+             content:
+               '$=_=>`$=${$};$()`;$()'
+           },
+           {type: ParagraphType.Paragraph, content: 'Discussion' },
+           {type: ParagraphType.Code, language: 'javascript',
+             content:
+               '(_=$=>`(_=${_})()`)()'
+           },
+           {type: ParagraphType.Paragraph, content: 'Discussion' },
+          ]
+        },
       
-      // {
-      //   title: 'Example code',
-      //   author: 'm.s',
-      //   date: '2019/02/24',
-      //   body: [
-      //     {type: ParagraphType.Title, content: 'Introduction'},
-      //     {type: ParagraphType.Paragraph, content:
-      //         'This is just an example article to remember ' +
-      //         'how to include code and accordion code.'
-      //     },
-      //     {type: ParagraphType.Title, content: 'Code'},
-      //     {type: ParagraphType.Code, language: 'javascript',
-      //       content:
-      //         '$=_=>`$=${$};$()`;$()\n' +
-      //         '(_=$=>`(_=${_})()`)()'
-      //     },
-      //     {type: ParagraphType.Title, content: 'Collapsible code'},
-      //     {type: ParagraphType.CollapsibleCode, language: 'javascript',
-      //       heading: 'JS fbomb ',
-      //       content:
-      //         '(function f() {\n' +
-      //         '\trequire(\'child_process\')\n' +
-      //         '\t\t.spawn(process.argv[0], [\'-e\', \'(\' + f.toString() + \'());\']);\n' +
-      //         '\trequire(\'child_process\')\n' +
-      //         '\t\t.spawn(process.argv[0], [\'-e\', \'(\' + f.toString() + \'());\']); \n' +
-      //         '}\n' +
-      //         '\/\/ Please don\'t do that.\n' +
-      //         '\/\/()\n' +
-      //         ');\n'
-      //     }
-      //   ]
-      // }
+       {
+         title: 'Example code',
+         author: 'm.s',
+         date: '2019/02/24',
+         body: [
+           {type: ParagraphType.Title, content: 'Introduction'},
+           {type: ParagraphType.Paragraph, content:
+               'This is just an example article to remember ' +
+               'how to include code and accordion code.'
+           },
+           {type: ParagraphType.Title, content: 'Code'},
+           {type: ParagraphType.Code, language: 'javascript',
+             content:
+               '$=_=>`$=${$};$()`;$()\n' +
+               '(_=$=>`(_=${_})()`)()'
+           },
+           {type: ParagraphType.Title, content: 'Collapsible code'},
+           {type: ParagraphType.Code, language: 'javascript',
+             heading: 'JS fbomb ',
+             content:
+               '(function f() {\n' +
+               '\trequire(\'child_process\')\n' +
+               '\t\t.spawn(process.argv[0], [\'-e\', \'(\' + f.toString() + \'());\']);\n' +
+               '\trequire(\'child_process\')\n' +
+               '\t\t.spawn(process.argv[0], [\'-e\', \'(\' + f.toString() + \'());\']); \n' +
+               '}\n' +
+               '\/\/ Please don\'t do that.\n' +
+               '\/\/()\n' +
+               ');\n'
+           }
+         ]
+       },
     ];
 
     for (let a = 0; a < articles.length; ++a) {
