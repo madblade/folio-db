@@ -4,7 +4,7 @@ import { Craft } from './src/craft.js';
 // import { Homepage } from './src/homepage';
 import { Pieces } from './src/pieces.js';
 import { Technical } from './src/technical.js';
-import { Thoughts } from './src/thoughts.js';
+import { Art } from './src/art.js';
 
 import { Categories } from './src/categories.js';
 
@@ -18,7 +18,7 @@ let craft      = Craft.getArticles();
 // let homepage   = Homepage.getArticles();
 let pieces     = Pieces.getArticles();
 let technical  = Technical.getArticles();
-let thoughts   = Thoughts.getArticles();
+let art   = Art.getArticles();
 
 
 function generateArticleIds(arts, startIndex, reverse) {
@@ -34,14 +34,14 @@ function generateArticleIds(arts, startIndex, reverse) {
 generateArticleIds(craft, 10000, true);
 generateArticleIds(pieces, 20000, true);
 generateArticleIds(technical, 30000, true);
-generateArticleIds(thoughts, 40000, true);
+generateArticleIds(art, 40000, true);
 
 let allArticles = [];
 // allArticles.push(...homepage );
 allArticles.push(...craft    );
 allArticles.push(...pieces   );
 allArticles.push(...technical);
-allArticles.push(...thoughts );
+allArticles.push(...art );
 
 // Json categories
 fs.writeFile(
@@ -86,7 +86,7 @@ writeTitles('craft', craft    , logfn);
 // writeTitles('homepage', homepage , logfn);
 // writeTitles('thoughts', pieces   , logfn);
 writeTitles('technical', technical, logfn);
-writeTitles('thoughts', pieces.concat(thoughts), logfn);
+writeTitles('art', pieces.concat(art), logfn);
 
 // Json per-article
 for (let i = 0; i < allArticles.length; ++i) {

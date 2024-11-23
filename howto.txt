@@ -2,7 +2,7 @@
 node .\index.js
 // To serve in db:
 cd db/
-npx http-server -p 31338
+npx http-server -p 31338 --cors
 // Don’t forget to adapt port in article.service.ts:
 // private dbUrl = 'https://raw.githubusercontent.com/username/folio-db/master/db/'
 // private dbUrl = http://localhost:31338

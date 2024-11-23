@@ -17,31 +17,3 @@ const ParagraphType = {
   ClickableDemo: 14
 }
 export { ParagraphType };
-
-/*
-export class Article {
-  id: number;
-  title: string;
-  type: string; // Text, Slides
-  author: string;
-  style: string;
-  date: string;
-  body:
-    {
-      id: number,
-      type: ParagraphType,
-      content: string,
-      language: string,
-      heading: string
-    }[];
-
-  constructor(copy) {
-    this.id = copy.id;
-    this.title = copy.title;
-    this.author = copy.author;
-    this.style = copy.style;
-    this.date = copy.date;
-    this.body = copy.body;
-  }
-}
-*/

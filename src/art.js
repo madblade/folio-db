@@ -1,9 +1,9 @@
 import {ParagraphType} from './article.js';
-import {A0} from './thoughts-detail/art0.js';
-import {A1} from './thoughts-detail/art1.js';
-import {A2} from './thoughts-detail/art2.js';
+import {A0} from './art-detail/art0.js';
+import {A1} from './art-detail/art1.js';
+import {A2} from './art-detail/art2.js';
 
-export class Thoughts {
+export class Art {
 
   static getArticles() {
     const articles = [
@@ -20,7 +20,7 @@ export class Thoughts {
     ];
 
     for (let a = 0; a < articles.length; ++a) {
-      articles[a]['type'] = 'thoughts';
+      articles[a]['type'] = 'art';
     }
 
     return articles;

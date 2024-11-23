@@ -17,7 +17,7 @@ export class Technical {
               'Here are a few short paragraphs concerning topology, heavily inspired by <a href="https://www.3blue1brown.com/">3Blue1Brown</a>, that I initially intended to put in my dissertation as an introductory discussion. '
           },
           {type: ParagraphType.Paragraph, content:
-              'Topology investigates the fundamental structural properties of objects, that can be identified by looking at the said object regardless of any geometrical representation or measure. For that purpose, <i>homeomorphism</i> is a central concept, based on the notion of continuity, that allows to construct a topological characterization, so as to group objects, called <i>topological spaces</i>, in equivalence classes. Nonetheless, it proves quite difficult in practice to demonstrate that two objects are homeomorphic using only continuity. Topologists would rather make use of the concept of <i>invariants</i>, which are computable quantities (or algebraic structures) that stay the same for all objects that are homeomorphic to one another. It can be seen as a way to introduce back the concept of measure, in a more fundamental sense, to study topological objects. '
+              'Topology investigates the fundamental structural properties of objects, that can be identified by looking at the said object regardless of any geometrical representation or measure. For that purpose, <i>homeomorphism</i> is a central concept, based on the notion of continuity, that allows us to construct a topological characterization, so as to group objects, called <i>topological spaces</i>, in equivalence classes. Nonetheless, it proves quite difficult in practice to demonstrate that two objects are homeomorphic using only continuity. Topologists would rather make use of the concept of <i>invariants</i>, which are computable quantities (or algebraic structures) that stay the same for all objects that are homeomorphic to one another. It can be seen as a way to introduce back the concept of measure, in a more fundamental sense, to study topological objects. '
           },
           {type: ParagraphType.Paragraph, content:
               'In the following, we will try to give some insights about what topology can actually do, based on two concrete examples, for readers who are not necessarily well acquainted with the subject; this is the occasion to present some of its core concepts in a non-formal manner. '
@@ -143,7 +143,7 @@ export class Technical {
           },
           {type: ParagraphType.Paragraph, content:
               'Computing the field’s topology may provide further insight. ' +
-              'Broadly speaking, it allows to track singularities in the flow, ' +
+              'Broadly speaking, it allows us to track singularities in the flow, ' +
               'or to identify geometric zones where the flow’s behaviour is homogeneous. ' +
               'The most important singularities are often called <i>critical points</i>. ' +
               'These may correspond, for instance, to the center of vortices. '
@@ -173,7 +173,7 @@ export class Technical {
               '\\cdot e^{- \\frac{1}{\\text{range}} \\cdot \\lVert \\mathbf{p} \\rVert }) '
           },
           {type: ParagraphType.Paragraph, content:
-              'For one single vortex, this formula gives <small>$\\mathbf{v}$</small>, a three-dimensional (!) vector, ' +
+              'For one single vortex, this formula gives <small>$\\mathbf{v}$</small>, a three-dimensional vector, ' +
               'for any position <small>$\\mathbf{p}$</small>, when the origin is taken ' +
               'at the only vortex. The vector <small>$\\mathbf{z}$</small> denotes the unit vector orthogonal ' +
               'to the domain; the multiplicative symbol denotes the ' +
@@ -259,7 +259,7 @@ export class Technical {
               'approximated using the forward Euler ' +
               'method with time-steps of duration 1. ' +
               'Gravitation is made repulsive by using the appropriate convention ' +
-              'for the orientation of <small>$//mathbf{d}$</small>; in this case, it is oriented from ' +
+              'for the orientation of <small>$\\mathbf{d}$</small>; in this case, it is oriented from ' +
               'the vortex <small>$i$</small> to the vortex whose position is being updated. '
           },
           {type: ParagraphType.Paragraph, content:

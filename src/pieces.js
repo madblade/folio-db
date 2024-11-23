@@ -138,7 +138,7 @@ export class Pieces {
     ];
 
     for (let a = 0; a < articles.length; ++a) {
-      articles[a]['type'] = 'thoughts';
+      articles[a]['type'] = 'art';
     }
 
     return articles;
