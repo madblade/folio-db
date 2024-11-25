@@ -7,8 +7,8 @@ export class Art {
 
   static getArticles() {
     const articles = [
-      A0.get(),
-      A1.get(),
+      //A0.get(),
+      //A1.get(),
       A2.get(),
     
       // { title: 'Univ. compression',
