@@ -98,13 +98,13 @@ export class Technical {
 					'\\end{bmatrix}\n'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'Note that by convention, each point is considered to be its own $n^{th}$ nearest neighbor.'
+				'Note that by convention, each point is considered to be its own <small>$n^{th}$</small> nearest neighbor.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
 				'End of the story. …or is it?'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'The true story is that I was sort of bothered by the storting step. I found it weird to have a quasilinear processing of rows when every other manipulation was linear. The definition of the matrix $C$ itself sounded linear, so the sort really didn’t feel justified. So I took a closer look to the rank matrices.'
+				'The true story is that I was sort of bothered by the storting step. I found it weird to have a quasilinear processing of rows when every other manipulation was linear. The definition of the matrix <small>$C$</small> itself sounded linear, so the sort really didn’t feel justified. So I took a closer look to the rank matrices.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
 				'I took a closer look to the rank matrices. After a bit of fiddling around, I realized that <small>$B[i][A[i][j]] = j$</small>. In other words, the rank of <small>$A[i][j]$</small> relative to <small>$i$</small> is <small>$j$</small>. Which is the definition of <small>$A$</small>, and makes this part of the algorithm linear. After a while I asked myself, why bother with the sorting in the first place? Why is it not obvious to the eye that these manipulations on ranks can be simplified?'
