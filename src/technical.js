@@ -110,7 +110,7 @@ export class Technical {
 				'After a bit of fiddling around, I realized that <small>$B[i][A[i][j]] = j$</small>. In other words, the rank of <small>$A[i][j]$</small> relative to <small>$i$</small> is <small>$j$</small>. Which is the definition of <small>$A$</small>, and makes this part of the algorithm linear. After a while I asked myself, why bother with the sorting in the first place? Why is it not obvious to the eye that these manipulations on ranks can be simplified?'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'I think the answer is that we are manipulating different entities here: ranks, and indices, which both conventiently happen to be unsigned integers, and both happen to take all values between 1 and n. So the idea to use them interchangeably does not come naturally.'
+				'I think the answer is that we are manipulating different entities here: ranks, and indices, which both conveniently happen to be unsigned integers, and both happen to take all values between 1 and n. So the idea to use them interchangeably does not come naturally. Another possibility is that these manipulations on indices do not carry the initial intuition behind the approach, which is that if we need to convert indexing methods, there has to be some form of sorting involved.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
 				'But, you might ask, what about the secrecy? Why is the first word of this post “secretely”? Well, the complete story is that after I found this opportunity for optimization in the patent and told pepople about it, no one really seemed to care, and it ended not being implemented anywhere. So it really is a secret optimization that nobody likely knows about.'
