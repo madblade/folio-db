@@ -113,7 +113,7 @@ export class Technical {
 				'I think the answer is that we are manipulating different entities here: ranks, and indices, which both conventiently happen to be unsigned integers, and both happen to take all values between 1 and n. So the idea to use them interchangeably does not come naturally.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'But, you might ask, what about the secrecy? Why is the first word of this blog “Secretely”? Well, the complete story is that after I found this opportunity for optimization in the patent and told pepople about it, no one really seemed to care, and it ended not being implemented anywhere. So it really is a secret optimization that nobody likely knows about.'
+				'But, you might ask, what about the secrecy? Why is the first word of this post “secretely”? Well, the complete story is that after I found this opportunity for optimization in the patent and told pepople about it, no one really seemed to care, and it ended not being implemented anywhere. So it really is a secret optimization that nobody likely knows about.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
 				'Now, to be fair, I didn’t measure the performance delta at the time. Even if there are big gains in terms of memory because we don’t need to use a companion array for the sorting, there will still be a lot of cache misses because we are reading from <small>$A$</small> at random.'
