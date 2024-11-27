@@ -5,7 +5,7 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
-        title: 'Blender-like flow editor in Web',
+        title: 'Blender-like flow editor in JavaScript',
         date: '2021/04/05',
         author: 'M. S',
         thumb: 'assets/img/craft/vis-nn.jpg',
@@ -13,12 +13,11 @@ export class Craft {
           {type: ParagraphType.Image,
             content: 'assets/img/craft/vis-nn.jpg'
           },
-          {type: ParagraphType.Title, content: 'About' }, 
           {type: ParagraphType.Paragraph, content:
             'A small flow editor, inspired by <a href="https://github.com/martinjm97/ENNUI">Ennui</a> and <a href="https://github.com/retejs/rete">Rete</a>. Discontinued since I lost a lot of interest in AI tech.'
           },
           {type: ParagraphType.Paragraph, content:
-              'See the <a href="https://madblade.github.io/vis-nn/">Demo</a>'
+              '<a href="https://madblade.github.io/vis-nn/">Demo</a>'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://github.com/madblade/vis-nn/">Source code</a>'
@@ -34,7 +33,6 @@ export class Craft {
           {type: ParagraphType.Image,
             content: 'assets/img/craft/ik.jpg'
           },
-          {type: ParagraphType.Title, content: 'About' }, 
           {type: ParagraphType.Paragraph, content:
             'A short take on common IK algorithms.'
           },
@@ -58,7 +56,6 @@ export class Craft {
           {type: ParagraphType.Image,
             content: 'assets/img/craft/painterly-2.jpg'
           },
-          {type: ParagraphType.Title, content: 'About' }, 
           {type: ParagraphType.Paragraph, content:
             'Barbara Meier proposed in her Disney paper, <a href="https://disneyanimation.com/publications/painterly-rendering-for-animation/">Painterly Rendering for Animation</a>, to use particles instead of triangles to render brush strokes. Since then, many similar approaches have been proposed to tackle the (challenging) problem of placing and orienting those particle-brushes while keeping temporal coherence. '
           },
@@ -83,7 +80,6 @@ export class Craft {
            {type: ParagraphType.Image,
             content: 'assets/img/craft/spix-portals.jpg'
           },
-          {type: ParagraphType.Title, content: 'Introduction' }, 
           {type: ParagraphType.Paragraph, content:
             'Once I thought I’d grow tired of Minecraft because of cosmetic updates (more blocks, more effects, more mobs, more <i>things</i> and not more things <i>to do</i>), but this was before the Combat Update. Regardless of whether people agree or not with the design choices of this update, it was assuming a direction, restricting the range of possibilities rather than opening it. This somehow made me nostalgic of the Redstone Update, which provided players with something they needed—but they didn’t know they needed. '
           },
@@ -93,16 +89,15 @@ export class Craft {
           {type: ParagraphType.Paragraph, content:
             'Edit: more will be said about iteration speed and performance in a later article.'
           },
-          {type: ParagraphType.Title, content: 'Demo' },
           {type: ParagraphType.Paragraph, content:
-              '<a href="https://madblade.github.io/spix/">Try it here</a>'
+              '<a href="https://madblade.github.io/spix/">Demo</a>'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://github.com/madblade/spix/">Source code</a>'
           },
           {type: ParagraphType.Title, content: 'Some technical challenges' }, 
           {type: ParagraphType.Paragraph, content:
-            '<b>Texture bleeding</b>: using atlasing with texture filtering (linear mipmapping or anisotropic filtering) will produce bleeding artifacts on the edge of block tiles, because linear filters query neighbor tiles. At the time I worked on this, in WebGL, anisotropic filtering is performed by an extension called <i>EXT_texture_filter_anisotropic</i>, for which:'
+            '<b>Texture bleeding</b>: using atlasing with texture filtering (linear mipmapping or anisotropic filtering) will produce bleeding artifacts on the edge of block tiles, because linear filters query neighbor tiles. At the time I worked on this, in WebGL, anisotropic filtering was performed by an extension called <i>EXT_texture_filter_anisotropic</i>, for which:'
           },
 		{type: ParagraphType.Quotation, content: 'Implementations are (…) permitted to ignore the minification or magnification filter and implement the highest quality of anisotropic filtering possible. Applications seeking the highest quality anisotropic filtering available are advised to request a LINEAR_MIPMAP_LINEAR minification filter, a LINEAR magnification filter, and a large maximum degree of anisotropy.',
 		  origin: '',
@@ -166,7 +161,6 @@ export class Craft {
            {type: ParagraphType.Image,
             content: 'assets/img/craft/gerstner-2.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' }, 
           {type: ParagraphType.Paragraph, content:
             'Ocean rendering has been done in WebGL for a while (see this <a href="https://www.shadertoy.com/view/Ms2SD1">shadertoy</a>, and go check the old <i>webgl_shaders_ocean2</i> threejs example that was already using FFTs without compute shaders). These examples are impressive but they rely entirely on fragment processing. The Gerstner approach documented in <a href="https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models">GPU Gems 1</a> is geometry-oriented; it is more suitable in a number of scenarios, as it puts less strain on the GPU and is more model-friendly (e.g. to synchronize ship position and pitch-roll-yaw). '
           },
@@ -187,7 +181,6 @@ export class Craft {
            {type: ParagraphType.Image,
             content: 'assets/img/craft/shadow-volume.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' }, 
           {type: ParagraphType.Paragraph, content:
             '“Shadow volumes” is the name of an old 3D graphics technique that computes crisp, high-fidelity shadows. An important bottleneck to the technique is the high CPU load necessary to extract the shadow geometry (as well as the burden put on the fill rate during rasterization). When the shadow caster is sufficiently smooth, however, this geometry extraction becomes trivial—and the shadowing artifacts are kept to a minimum. This is an illustration with some smooth meshes (and a skinned character):'
           },
@@ -205,9 +198,8 @@ export class Craft {
         author: 'M. S',
         thumb: 'assets/img/craft/widget-default.jpg',
         body: [
-          {type: ParagraphType.Title, content: 'Try it' }, 
           {type: ParagraphType.Paragraph, content:
-            'Navigating a 3D scene on touch devices is challenging—pinch and drag movements are intuitive, but they require a fixed camera. These new controls emulate a gamepad for camera rotation and movement.'
+            'Navigating a 3D scene on touch devices is challenging—pinch and drag movements are intuitive, but they require a fixed camera. These controls emulate a gamepad for camera rotation and movement.'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/widget-mobile-controller/">Demo</a>'
@@ -231,9 +223,8 @@ export class Craft {
            {type: ParagraphType.Image,
             content: 'assets/img/craft/wormhole.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' }, 
             {type: ParagraphType.Paragraph, content:
-            'Interactive, (non-physical) real-time WebGL wormhole, inspired from <a href="https://github.com/sirxemic/Interstellar/">@sirxemic</a>. The achieved effect is designed entirely ad-hoc, based on a simple stretch shader and on a cubecam / envmap. '
+            'Interactive, (non-physical) real-time WebGL wormhole, inspired from <a href="https://github.com/sirxemic/Interstellar/">@sirxemic</a>. The achieved effect is designed entirely ad-hoc, based on a simple stretch shader and on a cubecam+envmap. '
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/wormhole/">Demo</a>'
@@ -252,7 +243,6 @@ export class Craft {
            {type: ParagraphType.Image,
             content: 'assets/img/craft/joconde.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' }, 
             {type: ParagraphType.Paragraph, content:
             'This is based on the wonderful idea by <a href="https://github.com/fogleman/primitive/">@fogleman</a>, that reconstructs images from simple (primitive) shapes. Don’t forget to check out the <a href="https://primitive.lol/">original application</a> for macOS.'
           },
@@ -273,7 +263,6 @@ export class Craft {
            {type: ParagraphType.Image,
             content: 'assets/img/craft/persistent.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' }, 
             {type: ParagraphType.Paragraph, content:
             'This short JavaScript demo presents the basic concepts of 1D and 2D persistent homology on a simple example.'
           },
@@ -294,7 +283,6 @@ export class Craft {
           {type: ParagraphType.Image,
             content: 'assets/img/craft/peg.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' }, 
           {type: ParagraphType.Paragraph, content:
               'This is a small visualization of the self-intersecting surface involved in the peg rectangle problem [<i>Balancing acts</i>, M. Meyerson, 1981; <i>Rectangles and simple closed curves</i>, H. Vaughan, 1977].'
           },
@@ -318,7 +306,6 @@ export class Craft {
           {type: ParagraphType.Image,
             content: 'assets/img/craft/sparseandtrack.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' },
           {type: ParagraphType.Paragraph, content:
           'This illustrates the optimized solver I made for computing the discrete <a href="https://en.wikipedia.org/wiki/Wasserstein_metric">Wasserstein distance</a> between <a href="https://en.wikipedia.org/wiki/Persistent_homology">persistence diagrams</a>.'
           },
@@ -347,14 +334,14 @@ export class Craft {
           },
           {type: ParagraphType.Title, content: 'CPU-based particle tracing' },
           {type: ParagraphType.Paragraph, content:
-              '<a href="https://madblade.github.io/particles-2d-cpu/">Try it</a>'
+              '<a href="https://madblade.github.io/particles-2d-cpu/">Demo</a>'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://github.com/madblade/particles-2d-cpu/">Source code</a>'
           },
           {type: ParagraphType.Title, content: 'GPU-based particle tracing' },
           {type: ParagraphType.Paragraph, content:
-              '<a href="https://madblade.github.io/particles-2d-gpu/">Try it</a>'
+              '<a href="https://madblade.github.io/particles-2d-gpu/">Demo</a>'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://github.com/madblade/particles-2d-gpu/">Source code</a>'
@@ -370,7 +357,6 @@ export class Craft {
           {type: ParagraphType.Image,
             content: 'assets/img/craft/kanas.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/kanalearn/">Learn kana</a>'
           },
@@ -413,7 +399,6 @@ export class Craft {
           {type: ParagraphType.Image,
             content: 'assets/img/craft/2048.jpg'
           },
-          {type: ParagraphType.Title, content: 'Try it' },
           {type: ParagraphType.Paragraph, content:
               'A little 3D extension to the mini-game by ' +
               '<a href="https://github.com/gabrielecirulli">@gabrielecirulli</a> ' +
