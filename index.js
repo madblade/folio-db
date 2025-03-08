@@ -1,7 +1,6 @@
 import * as fs from 'fs';
 
 import { Craft } from './src/craft.js';
-//import { Pieces } from './src/pieces.js';
 import { Technical } from './src/technical.js';
 import { Art } from './src/art.js';
 
@@ -14,7 +13,6 @@ let logfn = err => err ? console.log(err) : console.log('file saved');
 
 let categories = Categories.getCategories();
 let craft      = Craft.getArticles();
-//let pieces     = Pieces.getArticles();
 let technical  = Technical.getArticles();
 let art   = Art.getArticles();
 
@@ -29,13 +27,11 @@ function generateArticleIds(arts, startIndex, reverse) {
    }
 }
 generateArticleIds(craft, 10000, true);
-//generateArticleIds(pieces, 20000, true);
 generateArticleIds(technical, 30000, true);
 generateArticleIds(art, 40000, true);
 
 let allArticles = [];
 allArticles.push(...craft    );
-//allArticles.push(...pieces   );
 allArticles.push(...technical);
 allArticles.push(...art );
 
