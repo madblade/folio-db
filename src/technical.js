@@ -23,7 +23,7 @@ export class Technical {
   static getArticles() {
     const articles = [
 		{
-        title: 'Secretely optimizing a patented algorithm',
+        title: 'Late optimizations',
 			author: '',
 			type: 'welcome',
 			date: '2024/11/27',
@@ -110,14 +110,17 @@ export class Technical {
 				'After a bit of fiddling around, I realized that <small>$B[i][A[i][j]] = j$</small>. In other words, the rank of <small>$A[i][j]$</small> relative to <small>$i$</small> is <small>$j$</small>. Which is the definition of <small>$A$</small>. That makes this part of the algorithm linear: we just have to loop over <small>$j$</small> for a fixed <small>$i$</small>, and the corresponding row of the matrix <small>$B$</small> will be filled in linear time.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'After a while I asked myself, why bother with the sorting in the first place? Why is it not obvious to the eye that these manipulations on ranks can be simplified? I think the answer is that we are manipulating different entities here: ranks and indices, which both conveniently happen to be unsigned integers, and both happen to take all values between 1 and n. So the idea to use them interchangeably does not come naturally. Another possibility is that these manipulations on indices do not carry the initial intuition behind the approach, which is that if we want to manipulate indexing methods, there has to be some form of sorting involved.'
+				'Why bother with the sorting in the first place then? Why is it not obvious to the eye that these manipulations on ranks can be simplified? I think the answer is that we are manipulating different entities here: ranks and indices, which both conveniently happen to be unsigned integers, and both happen to take all values between 1 and n. So the idea to use them interchangeably does not come naturally. Another possibility is that these manipulations on indices do not carry the initial intuition behind the approach, which is that if we want to manipulate indexing methods, there has to be some form of sorting involved.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'But, you might ask, what about the secrecy? Well, the complete story is that after I found this opportunity for optimization in the patent and told pepople about it, no one really seemed to care, and it ended not being implemented anywhere. So it really might be a secret optimization that nobody likely knows about, at least in the context of MRGC.'
+				'After I found this opportunity for optimization in the patent and told pepople about it, no one really seemed to care, and it ended not being implemented anywhere. Now, to be fair, I didn’t measure the performance delta at the time. Even if there are interesting gains in terms of memory because we don’t need to use a companion array for the sorting, there will be a lot of cache misses because we are reading from <small>$A$</small> at random. But still! we could have saved a sort in a tight loop.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'Now, to be fair, I didn’t measure the performance delta at the time. Even if there are big gains in terms of memory because we don’t need to use a companion array for the sorting, there will be a lot of cache misses because we are reading from <small>$A$</small> at random.'
+				'What lessons can we learn from this? First, I’d say that once a complex approach has been engineered, it is hard for people to accept to come back to it later to understand it and optimize it, and the main reason for that is that we are cost-driven. Another of the offenders is the lack of time spent working on the approach, with patents lacking the peer-review process, although it can also be true of peer-reviewed papers with tight deadlines. '
 			  },
+			  {type: ParagraphType.Paragraph, content:
+				'In the context of game engines in particular, the cost-driven approach to development is widespread. Ironically, there is a high cost to that approach, in terms of technical debt, loss of knowledge, and loss of efficiency, that has often been neglected in competitive industries.'
+			  }
 			]
 		},
 	
