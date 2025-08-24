@@ -34,7 +34,7 @@ export class Technical {
 				'In 2014, I was asked to benchmark a few unsupervised clustering algorithms, such as k-means, soft k-means, k-medoids, HAC with different linkages, etc. Among these methods, there was the exotic <a href="https://patents.google.com/patent/US6295504B1/en">Multi-Resolution Graph-Based Clustering</a> (MRGC).'
 			  },
 			  {type: ParagraphType.Paragraph, content:
-				'like <a href="https://en.wikipedia.org/wiki/DBSCAN">DBSCAN</a>, the difference with k-means is that it does not require the user to specify the number of clusters <em>a priori</em>. It is inspired by an earlier method by <a href="https://www.gretsi.fr/data/colloque/pdf/1991_017-0023_11628.pdf">Changquan Gan</a>, based on using nearest neighbors. The patent expired in 2020, so there were not many implementations available at the time.'
+				'Like <a href="https://en.wikipedia.org/wiki/DBSCAN">DBSCAN</a>, the difference with k-means is that it does not require the user to specify the number of clusters <em>a priori</em>. It is inspired by an earlier method by <a href="https://www.gretsi.fr/data/colloque/pdf/1991_017-0023_11628.pdf">Changquan Gan</a>, based on using nearest neighbors. The patent expired in 2020, so there were not many implementations available at the time.'
 			  },
 			  {type: ParagraphType.Paragraph, content:
 				'The algorithm itself is not particularly difficult to implement, but it is a bit tedious since there are many steps compared to other simple clustering algorithms. One of the initial stages is to compute a rank matrix.'
@@ -182,7 +182,7 @@ export class Technical {
 				'63:y>1307?c[(i=y-1308)/5+62]>>i%5*6&63:(y=(i=y-33)%11)==0?0:y==1?39:y==10?22:\n'+
 				'c[i/11]>>36-y*4&15]>>d.x*6+d.y&1);}'
            },
-           {type: ParagraphType.Paragraph, content: 'This is really fun because it actually tells the machine how to write the characters with an embedded font, in contrast to just using .toString(). See the <a href="https://www.shadertoy.com/view/MlGcRz">shadertoy</a> in action and an explanation here by <a href="https://gpfault.net/posts/shader-quine.txt.html">nice_byte</a>.' },
+           {type: ParagraphType.Paragraph, content: 'This is really fun because it tells the machine how to write the characters with an embedded font, in contrast to just using .toString(). See the <a href="https://www.shadertoy.com/view/MlGcRz">shadertoy</a> in action and an explanation here by <a href="https://gpfault.net/posts/shader-quine.txt.html">nice_byte</a>.' },
           ]
         },
     ];

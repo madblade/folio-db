@@ -7,7 +7,7 @@ const a1 =
   thumb: '',
   body: [
   
-  {type: ParagraphType.Paragraph, content: 'This is a WIP section. I intend to post my drawings here.' },
+  {type: ParagraphType.Paragraph, content: 'This is a WIP section. Maybe some drawings will be posted here.' },
 /*  	{type: ParagraphType.Title, content: 'Movies' },
     {type: ParagraphType.Paragraph, content: '' },
 
