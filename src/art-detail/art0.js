@@ -6,22 +6,20 @@ const a1 =
   author: 'M. S',
   thumb: '',
   body: [
-  	{type: ParagraphType.Title, content: 'Movies' },
+  
+  {type: ParagraphType.Paragraph, content: 'This is a WIP section. I intend to post my drawings here.' },
+/*  	{type: ParagraphType.Title, content: 'Movies' },
     {type: ParagraphType.Paragraph, content: '' },
 
   	{type: ParagraphType.Title, content: 'Anime'},
     {type: ParagraphType.Paragraph, content: '' },
-    /*{type: ParagraphType.Quotation,
-	  content: 'Quote',
-      origin: 'Author',
-      source: 'Source'
-    }*/
+    
 	{type: ParagraphType.Title, content: 'Games'},
     {type: ParagraphType.Paragraph, content: '' },
 	
 	{type: ParagraphType.Title, content: 'Fictions'},
     {type: ParagraphType.Paragraph, content: '' },
-
+*/
   ]
 }; 
 return a1;

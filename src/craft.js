@@ -5,27 +5,7 @@ export class Craft {
   static getArticles() {
     const articles = [
       {
-        title: 'Blender-like flow editor in JavaScript',
-        date: '2021/04/05',
-        author: 'M. S',
-        thumb: 'assets/img/craft/vis-nn.jpg',
-        body: [
-          {type: ParagraphType.Image,
-            content: 'assets/img/craft/vis-nn.jpg'
-          },
-          {type: ParagraphType.Paragraph, content:
-            'A small flow editor, inspired by <a href="https://github.com/martinjm97/ENNUI">Ennui</a> and <a href="https://github.com/retejs/rete">Rete</a>. Discontinued since I lost a lot of interest in AI tech.'
-          },
-          {type: ParagraphType.Paragraph, content:
-              '<a href="https://madblade.github.io/vis-nn/">Demo</a>'
-          },
-          {type: ParagraphType.Paragraph, content:
-              '<a href="https://github.com/madblade/vis-nn/">Source code</a>'
-          }
-        ]
-      },
-      {
-        title: 'Inverse kinematics algorithms in WebGL',
+        title: 'Inverse kinematics in WebGL',
         date: '2021/01/16',
         author: 'M. S',
         thumb: 'assets/img/craft/ik.jpg',
@@ -57,7 +37,7 @@ export class Craft {
             content: 'assets/img/craft/painterly-2.jpg'
           },
           {type: ParagraphType.Paragraph, content:
-            'Barbara Meier proposed in her Disney paper, <a href="https://disneyanimation.com/publications/painterly-rendering-for-animation/">Painterly Rendering for Animation</a>, to use particles instead of triangles to render brush strokes. Since then, many similar approaches have been proposed to tackle the (challenging) problem of placing and orienting those particle-brushes while keeping temporal coherence. '
+            'Barbara Meier proposed in her Disney paper, <a href="https://disneyanimation.com/publications/painterly-rendering-for-animation/">Painterly Rendering for Animation</a>, to use particles instead of triangles to render brush strokes. Since then, many similar approaches have been proposed to tackle the (challenging) problem of placing and orienting those particle-brushes while keeping temporal coherence.'
           },
           {type: ParagraphType.Paragraph, content:
             'In this demo, information from the depth buffer and object UV coordinates is used to compute particle sizes, colors and orientations. The method is not robust temporally, with obvious instances of the “shower-door” effect (see the interesting paper: <a href="https://www-sop.inria.fr/reves/Basilic/2011/BBT11/paper.pdf">Temporal Coherence for Stylized Animations</a>).'
@@ -72,7 +52,7 @@ export class Craft {
       },
     
       {
-        title: 'WebGL and lightspeed prototyping: Minecraft with Portals',
+        title: 'Minecraft with Portals in WebGL',
         date: '2020/06/20',
         author: 'M. S',
         thumb: 'assets/img/craft/spix-portals.jpg',
@@ -81,13 +61,7 @@ export class Craft {
             content: 'assets/img/craft/spix-portals.jpg'
           },
           {type: ParagraphType.Paragraph, content:
-            'Once I thought I’d grow tired of Minecraft because of cosmetic updates (more blocks, more effects, more mobs, more <i>things</i> and not more things <i>to do</i>), but this was before the Combat Update. Regardless of whether people agree or not with the design choices of this update, it was assuming a direction, restricting the range of possibilities rather than opening it. This somehow made me nostalgic of the Redstone Update, which provided players with something they needed—but they didn’t know they needed. '
-          },
-          {type: ParagraphType.Paragraph, content:
-            'This small WebGL project shows that it is quite easy (even for a single person) to prototype simple ideas (even for a multiplayer sandbox game), like portals, generic gravity, basic effects; and to experiment, to grow as a person interested in graphics and game development, while keeping the possibilities open. The nature of the JavaScript ecosystem make it <i>really</i> fast to get a basic idea working and to debug—less than two seconds from the moment you hit Ctrl+S to your browser reloading with the project running up-to-date; out-of-the-box profilers and development tools, lots of support. This greatly reduces the time spent on debugging or investigating low-level technical details irrelevant to prototyping.'
-          },
-          {type: ParagraphType.Paragraph, content:
-            'Edit: more will be said about iteration speed and performance in a later article.'
+            'This small WebGL project is a javascript minecraft clone prototype with portals, generic gravity, multiplayer sandbox, and other basic effects, based on ThreeJS. The nature of javascript, its design and especially the JIT runtime, make it extremely fast to get a basic idea running and then to iterate. Browsers also provide out-of-the-box profilers and debugging tools. This greatly reduces the time spent on debugging or investigating low-level technical details irrelevant to prototyping.'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/spix/">Demo</a>'
@@ -104,28 +78,25 @@ export class Craft {
 		  source: ''
 		},
 		  {type: ParagraphType.Paragraph, content:
-            'This means that the magnification filter is most likely LINEAR (where we want NEAREST). If we don’t <i>really</i> care about bleeding in the distance at grazing angles, we certainly do care about having sharp, pixelated, minecraft-like textures when they’re magnified, and we want to keep them as small as they should be. Without much control on how anisotropic filtering combines mipmaps in WebGL, I had little choice but to disable anisotropic filtering and only use nearest filters. That produces (ugly) grain at oblique viewing angles.'
+            'This means that the magnification filter is most likely LINEAR (where we want NEAREST). If we don’t really care about bleeding in the distance at grazing angles, we certainly do care about having sharp, pixelated, minecraft-like textures when they’re magnified, and we want to keep them as small as they should be. Without much control on how anisotropic filtering combines mipmaps in WebGL, I just disabled anisotropic filtering and only used nearest filters. This produces ugly grain at the distance. The other workaround to the bleeding edges artifact would be to add padding each atlas tile, like in virtual texturing, but this requires a constant 1-pixel pad for all mips, and since WebGL does not have compute shaders, there is no viable option for mip generation other than the default one (without pads).'
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Portals</b>: performance and flexibility. Using render target textures (RTTs) is a flexible solution for rendering nested portals (and allows us to further apply distortion effects if we want), at the cost of performance. The other well-documented technique, that uses stencil masks, offers performance at the cost of being somewhat less flexible and more programmatically involved. Here we somewhat combine the advantages of both: first, rendering a scene that contains only the portal frame to the stencil buffer, then rendering the “otherworldly” scene into an RTT using the stencil buffer to restrict the screen space needing rasterization. There is a neat performance gain over only using RTTs! In Threejs, however, this comes with a drawback: there is no default anti-aliasing for rendering to textures, hence the need for an additional software FXAA pass.'
+            '<b>Portals</b>: performance and flexibility. Using render target textures (RTTs) is a flexible solution for rendering nested portals (and allows me to further apply distortion effects if I want), at the cost of performance. The other well-documented technique, that uses stencil masks, offers performance at the cost of being somewhat less flexible and more programmatically involved. Here I somewhat combined the advantages of both: first, rendering a scene that contains only the portal frame to the stencil buffer, then rendering the “otherworldly” scene into an RTT using the stencil buffer to restrict the screen space needing rasterization. There is a neat performance gain over only using RTTs! In Threejs, however, this comes with a drawback: there is no default anti-aliasing for rendering to textures, so I needed an additional software FXAA pass.'
           },
 		  {type: ParagraphType.Paragraph, content:
-            'Edit (2024/11): this excellent <a href="https://www.youtube.com/watch?v=w-Z1Fx0LvDc">Psychonauts 2 talk</a> mentions a few other technical points related to seamless portals, including one that I also implemented at the time: culling with an oblique view frustum.'
+            'Edit (2024/11): this excellent <a href="https://www.youtube.com/watch?v=w-Z1Fx0LvDc">Psychonauts 2 talk</a> mentions a few other technical points related to seamless portals, including one that I also implemented at the time from a discussion with Tom Hulton: culling with an oblique view frustum.'
           },
           {type: ParagraphType.Paragraph, content:
             '<b>Performance issues, I</b>: in a browser, performance is a major bottleneck. When a CPU task cannot be completed in less than 7ms (for 144Hz displays), it must be made progressive (which means, it must pause when its time budget has been exhausted, only to resume at the next game loop iteration). Having algorithms work in a streaming manner (and caching their work) is necessary for the terrain generation part, as well as for some topological algorithms that run there.'
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Performance issues, II</b>: the clock provided by the JavaScript function <i>performance.now()</i> was accurate to 5µs, before Spectre and Meltdown. Since then, for security reasons, the resolution of timers has been decreased, and the support for SharedArrayBuffer has been dropped by many browsers, greatly limiting the advantages WebWorkers could have. (Edit 2024/11 - shared arrays have been back for a while, but this should serve as a warning: browsers tend to auto-update frequently and may well deploy breaking changes for your application if you rely on too many APIs)'
+            '<b>Performance issues, II</b>: because of the generality of ThreeJS, it is necessary to use instancing for materials when rendering a given scene from multiple cameras in a single frame, which is the case for portals and water reflection. Without instancing materials and swapping between them after each render call, ThreeJS used to automatically recompile them because it thought that the lighting had changed. It was not storing the appropriate shader permutation key. This has been addressed a while ago by the ThreeJS people, but there are many other performance concerns with the way ThreeJS does things lazily. For examile, shader compilation warmups for all the material permutations and light configurations are not possible if we don’t know the exact lighting setup of every scene beforehand.'
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Performance issues, III</b>: because of the generality of Threejs, it is necessary to use instancing for materials when rendering a scene from multiple cameras in a single frame (that’s the case for portals and water reflection). Without instancing materials and swapping between them after each render call, Threejs automatically rebuilds them (because it thinks the lighting has changed), greatly increasing the CPU load and inducing a performance drop, which is most noticeable in Firefox. (Edit 2024/11 - this has been addressed a while ago by the Three folks, but there are many other performance concerns, such as shader compilation warmups that are difficult to do for all the material permutations and light configurations if we don’t know them beforehand)'
+            '<b>Multiplayer</b>: network bandwidth and latency are major bottlenecks that make it key to think about the project architecture from the start. Here I am using a simple lockstep model, only transmitting client inputs and world updates, but because of the SocketIO/TCP overhead, I found that client interpolation was necessary. An advantage of doing everything in javascript is that I can easily bundle the server and the client together—and launch the game locally in the browser. This is what is done in the demo, where the default game setting has the client running as fast as the display can handle, while the server is sending entity updates at 20Hz.'
           },
           {type: ParagraphType.Paragraph, content:
-            '<b>Performance issues, IV</b>: before getting started on a multiplayer-oriented project, it’s important to have a clear idea of what kind of a game model is suitable for that case. Network bandwidth and latency are major bottlenecks that makes it key to think about the project’s architecture from the start. Here I’m using a lockstep model (only transmitting client inputs and world updates), but because of the SocketIO/TCP overhead, I found that client interpolation was necessary. Another advantage of doing everything in JavaScript (NodeJS + ES6) is that I can easily bundle the server and the client together—and launch the game locally in the browser. This is what was done in the demo, where the default game settings has the client running as fast as the display can handle (bound to the display refresh rate), and the server is sending entity updates at 20Hz. '
-          },
-          {type: ParagraphType.Paragraph, content:
-            'This project came with many other challenges (e.g. physics, shadows, skies…) that I’d be happy to talk about in a next article.'
+            'This project came with other challenges (physics, crisp shadows, skies, terrain generation…) that I could talk about in more detail.'
           },
           {type: ParagraphType.Title, content: 'Gallery' },
           {type: ParagraphType.Image,
@@ -162,7 +133,7 @@ export class Craft {
             content: 'assets/img/craft/gerstner-2.jpg'
           },
           {type: ParagraphType.Paragraph, content:
-            'Ocean rendering has been done in WebGL for a while (see this <a href="https://www.shadertoy.com/view/Ms2SD1">shadertoy</a>, and go check the old <i>webgl_shaders_ocean2</i> threejs example that was already using FFTs without compute shaders). These examples are impressive but they rely entirely on fragment processing. The Gerstner approach documented in <a href="https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models">GPU Gems 1</a> is geometry-oriented; it is more suitable in a number of scenarios, as it puts less strain on the GPU and is more model-friendly (e.g. to synchronize ship position and pitch-roll-yaw). '
+            'Ocean rendering has been done in WebGL for a while (see this <a href="https://www.shadertoy.com/view/Ms2SD1">shadertoy</a>, and the <i>webgl_shaders_ocean2</i> ThreeJS example that was already using FFTs without compute shaders). These examples are impressive but they rely entirely on fragment processing. The Gerstner approach documented in <a href="https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-1-effective-water-simulation-physical-models">GPU Gems 1</a> is geometry-oriented; it is more suitable in a number of scenarios, as it puts less strain on the GPU and is more model-friendly, e.g. to synchronize ship position and pitch-roll-yaw. '
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/waves-gerstner/">Demo</a>'
@@ -173,7 +144,7 @@ export class Craft {
         ]
       },
       {
-        title: 'Approximate shadow volumes for smooth geometry',
+        title: 'Smooth shadow volumes',
         date: '2020/05/05',
         author: 'M. S',
         thumb: 'assets/img/craft/shadow-volume.jpg',
@@ -182,7 +153,7 @@ export class Craft {
             content: 'assets/img/craft/shadow-volume.jpg'
           },
           {type: ParagraphType.Paragraph, content:
-            '“Shadow volumes” is the name of an old 3D graphics technique that computes crisp, high-fidelity shadows. An important bottleneck to the technique is the high CPU load necessary to extract the shadow geometry (as well as the burden put on the fill rate during rasterization). When the shadow caster is sufficiently smooth, however, this geometry extraction becomes trivial—and the shadowing artifacts are kept to a minimum. This is an illustration with some smooth meshes (and a skinned character):'
+            '“Shadow volumes” is the name of an old 3D graphics technique that computes crisp, high-fidelity shadows. An important bottleneck of the technique is the high CPU load necessary to extract the shadow geometry. When the shadow caster is sufficiently smooth, however, this geometry extraction becomes trivial—and the shadowing artifacts are kept to a minimum. Still, the method is demanding in terms of fillrate. This demo is an illustration with some smooth meshes and a skinned character.'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/shadow-volume/">Demo</a>'
@@ -193,7 +164,7 @@ export class Craft {
         ]
       },
       {
-        title: 'First-person mobile controls for Three.js',
+        title: 'Mobile controls for ThreeJS',
         date: '2020/04/25',
         author: 'M. S',
         thumb: 'assets/img/craft/widget-default.jpg',
@@ -224,7 +195,7 @@ export class Craft {
             content: 'assets/img/craft/wormhole.jpg'
           },
             {type: ParagraphType.Paragraph, content:
-            'Interactive, (non-physical) real-time WebGL wormhole, inspired from <a href="https://github.com/sirxemic/Interstellar/">@sirxemic</a>. The achieved effect is designed entirely ad-hoc, based on a simple stretch shader and on a cubecam+envmap. '
+            'Interactive, non-physical real-time WebGL wormhole, inspired from <a href="https://github.com/sirxemic/Interstellar/">@sirxemic</a>. The achieved effect is designed entirely ad-hoc, based on a simple stretch shader and on a cubecam+envmap. '
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/wormhole/">Demo</a>'
@@ -244,7 +215,7 @@ export class Craft {
             content: 'assets/img/craft/joconde.jpg'
           },
             {type: ParagraphType.Paragraph, content:
-            'This is based on the wonderful idea by <a href="https://github.com/fogleman/primitive/">@fogleman</a>, that reconstructs images from simple (primitive) shapes. Don’t forget to check out the <a href="https://primitive.lol/">original application</a> for macOS.'
+            'This is based on the wonderful idea by <a href="https://github.com/fogleman/primitive/">@fogleman</a>, that reconstructs images from simple primitive shapes. Take a look at the <a href="https://primitive.lol/">original application</a> for macOS.'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/geotransform/">Demo</a>'
@@ -264,7 +235,7 @@ export class Craft {
             content: 'assets/img/craft/persistent.jpg'
           },
             {type: ParagraphType.Paragraph, content:
-            'This short JavaScript demo presents the basic concepts of 1D and 2D persistent homology on a simple example.'
+            'This short javascript demo presents the basic concepts of 1D and 2D persistent homology on a simple example.'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/persistence/">Demo</a>'
@@ -321,7 +292,7 @@ export class Craft {
         ]
       },
       {
-        title: 'Particle tracing for vector fields',
+        title: '2D particle tracing',
         date: '2019/08/05',
         author: 'M. S',
         thumb: 'assets/img/technical/particles12.jpg',
@@ -330,7 +301,7 @@ export class Craft {
             content: 'assets/img/craft/particles12.jpg'
           },
 			{type: ParagraphType.Paragraph, content:
-          'This was inspired by interactive JavaScript <a href="https://github.com/Esri/wind-js">wind maps</a>.'
+          'This was inspired by interactive javascript <a href="https://github.com/Esri/wind-js">wind maps</a>.'
           },
           {type: ParagraphType.Title, content: 'CPU-based particle tracing' },
           {type: ParagraphType.Paragraph, content:
@@ -349,7 +320,7 @@ export class Craft {
         ]
       },
       {
-        title: 'Lightspeed Japanese vocabulary learning',
+        title: 'Learning Japanese vocabulary',
         date: '2019/08/05',
         author: 'M. S',
         thumb: 'assets/img/craft/kanji.jpg',
@@ -366,7 +337,7 @@ export class Craft {
           {type: ParagraphType.Title, content: 'Quick notes' },
           {type: ParagraphType.Paragraph, content:
               'It is best to write down characters ' +
-              '(following the numbers appearing in the pictures) ' +
+              'following the numbers appearing in the pictures ' +
               'in order to properly assimilate and memorize Japanese kana. ' +
               'The same goes for kanji; which should ' +
               'be learned in context (in sentences). '
@@ -384,14 +355,11 @@ export class Craft {
               'so be sure to use the app with both modes, ' +
               ' characters and images, ' + 
               'alternatively. '
-          },
-		  {type: ParagraphType.Paragraph, content:
-              'Edit (2024/11): this method of learning does not work at all. I can’t remember any of them.'
           }
         ]
       },
       {
-        title: '2048-3D',
+        title: '2048 in 3D',
         date: '2019/07/29',
         author: 'M. S',
         thumb: 'assets/img/craft/20482.jpg',
@@ -402,7 +370,7 @@ export class Craft {
           {type: ParagraphType.Paragraph, content:
               'A little 3D extension to the mini-game by ' +
               '<a href="https://github.com/gabrielecirulli">@gabrielecirulli</a> ' +
-              'made in three days.'
+              'made in a few days.'
           },
           {type: ParagraphType.Paragraph, content:
               '<a href="https://madblade.github.io/2048-3D/">Demo</a>'
